@@ -57,7 +57,12 @@ npm start
 
 Feel free to use this portfolio template to build your own personal portfolio website. Customize the content, styles, and functionality to match your preferences and showcase your unique skills and projects.
 
+## Website
+
+Check out the deployed website at [https://vigneshthipparthi-portfolio.vercel.app/](https://vigneshthipparthi-portfolio.vercel.app/).
+
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or create a pull request.
 
+--- 
