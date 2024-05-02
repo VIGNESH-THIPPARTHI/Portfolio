@@ -15,7 +15,7 @@ export const Bio = {
       "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
     github: "https://github.com/vignesh3022",
     resume:
-      "https://drive.google.com/file/d/1E2JX2emy1-nUKIcaIo8lv-kQPBs0ZU5p/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1Rl1lYNVfByhgp4Xn6uFDkqrYK-CcBJ5L/view?usp=drivesdk",
     linkedin: "https://www.linkedin.com/in/vignesh-thipparthi-23197824a",
     Leetcode: "https://leetcode.com/VIGNESH_12B2/",
     insta: "https://www.instagram.com/t.vignesh_3004?igsh=MXd3OHkyczV5N25kdQ==",
@@ -167,7 +167,7 @@ export const Bio = {
   export const education = [
     {
       id: 0,
-      img: "https://gyaanarth.com/wp-content/uploads/2022/08/1167334_565884593486853_1203539694_o-1024x788.jpg",
+      img: "https://images.shiksha.com/mediadata/images/1595846059phpNWbCy3.jpeg",
       school: "BV Raju Institute of Technology, Narsapur, Medak",
       date: "Oct 2020 - Jun 2024",
       grade: "8.86 CGPA",
@@ -223,7 +223,7 @@ export const Bio = {
 
     },
     {
-      id: 4,
+      id: 3,
       title: "Quiz Web App",
       date: "Mar 2024",
       description:
@@ -235,31 +235,9 @@ export const Bio = {
       webapp: "https://our-quizapp.vercel.app/",
     },
     {
-      id: 3,
-      title: "Smart Blind Stick",
-      date: "Sept 2020 - Oct 2022",
-      description:
-        "This innovative assistive technology, crafted for individuals with visual impairments, employs advanced ultrasonic sensors and the Arduino UNO platform. It provides precise obstacle detection within a 5-meter radius, accompanied by an audible buzzer signal and the added feature of creating vibrations. This dual-alert system enhances user safety and confidence in navigating their surroundings, offering a comprehensive solution for individuals with visual challenges.",
-      image:
-        "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FI%2F711An0gDgHL._SL1500_.jpg&f=1&nofb=1&ipt=a63a28e26bb2e3379e25a14c382530d403cb709a6b11c8a898da243c85df0eca&ipo=images",
-      tags: ["Arduino UNO", "Ultrasonic Sensor","Buzzer", "Code in C++"],
-      category: "Iot",
-    },
-    {
       id: 4,
-      title: "Smart Wrist Band for Women",
-      date: "Oct 2020 - Nov 2022",
-      description:
-        "Engineered an IoT-powered Smart Wrist Band with an exclusive dedication to fortifying women's safety. This innovative device not only promptly dispatches certified alarm notifications but also facilitates real-time location sharing, thereby enhancing security during critical moments.The device constitute of Arduino Uno and a gsm module enabling to send messages and a geo locater that detects the user location and together helps to send the information.",
-      image:
-        "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcircuitdigest.com%2Fsites%2Fdefault%2Ffiles%2Fprojectimage_mic%2FWomen-Safety-Device.jpg&f=1&nofb=1&ipt=f2710e687c11ed135d2ba93448d21fac19768437618caeaf49ab8475907b4d33&ipo=images",
-      tags: ["Gsm", "Arduino","Geo locater"],
-      category: "Iot",
-    },
-    {
-      id: 5,
       title: "Deep Fake Face Detection",
-      date: "Jan 2024 - Mar 2024",
+      date: "Jan 2024 - Apr 2024",
       description: 
         ["Implemented a robust Deepfake Face Detection System using Long Short-Term Memory (LSTM) networks and Xception architecture. The project aimed to address the rising concerns related to deepfake technologies, specifically targeting facial manipulation. The combination of LSTM, known for its sequential data handling capabilities, and Xception, a powerful convolutional neural network (CNN), enabled accurate and real-time detection of manipulated facial images.",
         "Utilized LSTM networks for handling sequential data.",
@@ -271,6 +249,29 @@ export const Bio = {
       tags: ["LSTM", "Xception","TensorFlow", "Keras","OpenCV", "Precision", "Recall", "F1-score"],
       category: "machine learning",
     },
+    {
+      id: 5,
+      title: "Smart Blind Stick",
+      date: "Sept 2020 - Oct 2022",
+      description:
+        "This innovative assistive technology, crafted for individuals with visual impairments, employs advanced ultrasonic sensors and the Arduino UNO platform. It provides precise obstacle detection within a 5-meter radius, accompanied by an audible buzzer signal and the added feature of creating vibrations. This dual-alert system enhances user safety and confidence in navigating their surroundings, offering a comprehensive solution for individuals with visual challenges.",
+      image:
+        "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FI%2F711An0gDgHL._SL1500_.jpg&f=1&nofb=1&ipt=a63a28e26bb2e3379e25a14c382530d403cb709a6b11c8a898da243c85df0eca&ipo=images",
+      tags: ["Arduino UNO", "Ultrasonic Sensor","Buzzer", "Code in C++"],
+      category: "Iot",
+    },
+    {
+      id: 6,
+      title: "Smart Wrist Band for Women",
+      date: "Oct 2020 - Nov 2022",
+      description:
+        "Engineered an IoT-powered Smart Wrist Band with an exclusive dedication to fortifying women's safety. This innovative device not only promptly dispatches certified alarm notifications but also facilitates real-time location sharing, thereby enhancing security during critical moments.The device constitute of Arduino Uno and a gsm module enabling to send messages and a geo locater that detects the user location and together helps to send the information.",
+      image:
+        "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcircuitdigest.com%2Fsites%2Fdefault%2Ffiles%2Fprojectimage_mic%2FWomen-Safety-Device.jpg&f=1&nofb=1&ipt=f2710e687c11ed135d2ba93448d21fac19768437618caeaf49ab8475907b4d33&ipo=images",
+      tags: ["Gsm", "Arduino","Geo locater"],
+      category: "Iot",
+    },
+    
   ];
   
   
