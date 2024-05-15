@@ -12,11 +12,11 @@ export const Bio = {
 
     ],
     description:
-      "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
+      "I am a driven and adaptable professional, consistently seeking out new opportunities for growth. Committed to excellence, I prioritize delivering exceptional outcomes. Possessing an optimistic outlook and a proactive approach, I am poised to bring valuable contributions and attain remarkable milestones.",
     github: "https://github.com/vignesh3022",
     resume:
-      "https://drive.google.com/file/d/1Rl1lYNVfByhgp4Xn6uFDkqrYK-CcBJ5L/view?usp=drivesdk",
-    linkedin: "https://www.linkedin.com/in/vignesh-thipparthi-23197824a",
+      "https://drive.google.com/file/d/1V4qkE4RJ3zJyXZMx5nZuF0tXfraUEUH8/view?usp=drivesdk",
+    linkedin: " https://www.linkedin.com/in/vignesh-thipparthi/",
     Leetcode: "https://leetcode.com/VIGNESH_12B2/",
     insta: "https://www.instagram.com/t.vignesh_3004?igsh=MXd3OHkyczV5N25kdQ==",
   };
@@ -146,9 +146,9 @@ export const Bio = {
             "https://img.icons8.com/?size=96&id=9OGIyU8hrxW5&format=png",
         },
         {
-          name: "Jira",
+          name: "Vercel",
           image:
-          "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.jIuf4iEHhSBcX4x484UlOwHaEK%26pid%3DApi&f=1&ipt=dad3ee34098e2db35a96669243478c3d460a87e03dbfdf5a33981a158c5d67fe&ipo=images",
+          "https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png",
 
         },
         {
@@ -166,16 +166,16 @@ export const Bio = {
   
   export const education = [
     {
-      id: 0,
+      id: 1,
       img: "https://images.shiksha.com/mediadata/images/1595846059phpNWbCy3.jpeg",
       school: "BV Raju Institute of Technology, Narsapur, Medak",
       date: "Oct 2020 - Jun 2024",
-      grade: "8.86 CGPA",
+      grade: "8.96 CGPA",
       desc: "I am currently pursuing a Bachelor's degree in Information Technology and Engineering at BV Raju Institute Of Technology. I have completed 7 semesters and have a CGPA of 8.86. I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others.",
       degree: "Bachelor of Technology - BTech, Information Technology and Engineering",
     },
     {
-      id: 1,
+      id: 2,
       img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.logolynx.com%2Fimages%2Flogolynx%2F33%2F338f2c4e0d48a27ed6ad2a72821d3721.jpeg&f=1&nofb=1&ipt=780262f41ace27715c6b7c3f137f5e962569773c8e0f559da5167edcf00a5941&ipo=images",
       school: "Narayana Junior College, Hyderabad",
       date: "Jun 2017 - Apr 2019",
@@ -184,7 +184,7 @@ export const Bio = {
       degree: "TSBIE(XII), MPC",
     },
     {
-      id: 2,
+      id: 3,
       img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fis2-ssl.mzstatic.com%2Fimage%2Fthumb%2FPurple114%2Fv4%2Ff9%2Fde%2Fd6%2Ff9ded6cd-721e-d672-4e7c-a9a88a869281%2Fsource%2F512x512bb.jpg&f=1&nofb=1&ipt=ef2e0a2712947421592dc21f4218efc0957a6e0cb2b85f89a0b75b62153dd2b4&ipo=images",
       school: "Krishnaveni High School, Metpally",
       date: "Apr 2017",
@@ -201,7 +201,7 @@ export const Bio = {
       title: "Todos Web App",
       date: "Feb 2024",
       description:
-        "This is a simple weather app built using React. It allows users to fetch weather information based on either the city name or their current location. The app utilizes the OpenWeatherMap API to retrieve weather data. It will fetch weather information based on city name or current location, display temperature in both Celsius and Fahrenheit, and show additional weather details such as humidity, wind speed, and weather description. Additionally, the background image changes based on weather conditions.",
+        "Introducing Todos Website, your ultimate destination for streamlined task management and productivity. Seamlessly organize your to-do list while enjoying refreshing breaks with engaging games. With an intuitive interface and cross-device accessibility, staying organized has never been easier.Experience easy task management, including adding, deleting, and marking tasks as completed. Your tasks are securely stored locally, eliminating the need for sign-ups or password management. The distraction-free design fosters efficient organization, keeping you focused on your priorities.Explore our Energize Yourself section for stimulating games like Tic-Tac-Toe, Word Scramble, Memory Card, and Chess. Challenge yourself or compete with friends, revitalizing your mind and fostering creativity.",
       image: Todos,
       tags: ["HTML", "Javascript","CSS","Bootstrap","Anime.js","Local Storage" ],
       category: "web app",
