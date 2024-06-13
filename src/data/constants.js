@@ -15,7 +15,7 @@ export const Bio = {
       "I am a driven and adaptable professional, consistently seeking out new opportunities for growth. Committed to excellence, I prioritize delivering exceptional outcomes. Possessing an optimistic outlook and a proactive approach, I am poised to bring valuable contributions and attain remarkable milestones.",
     github: "https://github.com/vignesh3022",
     resume:
-      "https://drive.google.com/file/d/1aWHLfzojfTj63NdDme_OozQzRDt7SNQR/view?usp=drivesdk",
+      "https://drive.google.com/file/d/18-rc3TjRb691iRVcxU4ZAbWACOi8Uacb/view?usp=drivesdk",
     linkedin: " https://www.linkedin.com/in/vignesh-thipparthi/",
     Leetcode: "https://leetcode.com/VIGNESH_12B2/",
     insta: "https://www.instagram.com/t.vignesh_3004?igsh=MXd3OHkyczV5N25kdQ==",
@@ -116,7 +116,7 @@ export const Bio = {
           name:"Kotlin",
           image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXk1KazwxBr0WhH8JrlzaSOnmuGkX0wRdrTA&s",
       
-        }
+        },
        
         
         
