@@ -33,7 +33,8 @@ const HeroSection = () => {
 
                     <HeroRightContainer id="Right">
 
-                        <Img src={HeroImg} alt="hero-image" />
+                        <Img src={HeroImg} alt="hero-image"
+                        className="transition-transform duration-300 ease-in-out transform hover:scale-110" />
                     </HeroRightContainer>
                 </HeroInnerContainer>
 

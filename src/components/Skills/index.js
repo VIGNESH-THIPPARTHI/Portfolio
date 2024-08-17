@@ -90,7 +90,7 @@ const SkillList = styled.div`
   display: flex;
   justify-content: center; 
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 14px;
   margin-bottom: 20px;
 `
 
@@ -116,7 +116,7 @@ const SkillItem = styled.div`
   }
   transition: all 0.5s ease-in-out;
   &:hover {
-    transform: translateY(-8px);
+    transform: translateY(-6px);
     box-shadow: 0 0 50px 4px rgba(0,0,0,0.6);
     filter: brightness(1.1);
 }

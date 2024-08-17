@@ -1,9 +1,11 @@
 import React from 'react'
-import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, GitHubButton, ButtonContainer, MobileIcon, MobileMenu, LeetCodeButton, MobileLink } from './NavbarStyledComponent'
+import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, ButtonContainer, MobileIcon, MobileMenu, SocialMediaButtons, MobileLink } from './NavbarStyledComponent'
 import { DiCssdeck } from 'react-icons/di';
 import { FaBars } from 'react-icons/fa';
 import { Bio } from '../../data/constants';
 import { useTheme } from 'styled-components';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { GitHub } from '@mui/icons-material';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -29,8 +31,9 @@ const Navbar = () => {
           <NavLink href='#contact'>Contact</NavLink>
         </NavItems>
         <ButtonContainer>
-          <GitHubButton href={Bio.github} target="_blank">Github Profile</GitHubButton>
-          <LeetCodeButton href="https://leetcode.com/VIGNESH_12B2/" target="_blank">LeetCode</LeetCodeButton>
+        <SocialMediaButtons href="https://leetcode.com/VIGNESH_12B2/" target="_blank">LeetCode</SocialMediaButtons>
+          <SocialMediaButtons href="linkedin.com/in/vignesh-thipparthi" target="_blank"><LinkedInIcon/></SocialMediaButtons>
+          <SocialMediaButtons href={Bio.github} target="_blank"><GitHub/></SocialMediaButtons>
         </ButtonContainer>
         {
           isOpen &&
@@ -50,7 +53,9 @@ const Navbar = () => {
             <MobileLink href='#contact' onClick={() => {
               setIsOpen(!isOpen)
             }}>Contact</MobileLink>
-            <GitHubButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}} href={Bio.github} target="_blank">Github Profile</GitHubButton>
+            <SocialMediaButtons style={{ marginLeft:'-9px',color: 'white', width: 'max-content',fontWeight: '500',fontSize:'16px' }} href={Bio.github} target="_blank">Github</SocialMediaButtons>
+            <SocialMediaButtons style={{ marginLeft:'-9px',color: 'white', width: 'max-content',fontWeight: '500',fontSize:'16px' }} href="https://leetcode.com/VIGNESH_12B2/" target="_blank">LinkedIn</SocialMediaButtons>
+            <SocialMediaButtons style={{ marginLeft:'-9px',color: 'white', width: 'max-content',fontWeight: '500',fontSize:'16px' }} href="https://leetcode.com/VIGNESH_12B2/" target="_blank">LeetCode</SocialMediaButtons>
           </MobileMenu>
         }
       </NavbarContainer>

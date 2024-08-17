@@ -15,7 +15,7 @@ export const Bio = {
       "I am a driven and adaptable professional, consistently seeking out new opportunities for growth. Committed to excellence, I prioritize delivering exceptional outcomes. Possessing an optimistic outlook and a proactive approach, I am poised to bring valuable contributions and attain remarkable milestones.",
     github: "https://github.com/vignesh3022",
     resume:
-      "https://drive.google.com/file/d/18-rc3TjRb691iRVcxU4ZAbWACOi8Uacb/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1tqJxF_ScCh7RKps-eupm0j-iv3JH1JOC/view?usp=drivesdk",
     linkedin: " https://www.linkedin.com/in/vignesh-thipparthi/",
     Leetcode: "https://leetcode.com/VIGNESH_12B2/",
     insta: "https://www.instagram.com/t.vignesh_3004?igsh=MXd3OHkyczV5N25kdQ==",
@@ -40,6 +40,12 @@ export const Bio = {
             "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
         },
         {
+          name: "Tailwind CSS",
+          image:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNhoXisDruJMDAq3Ltd-wuaMW2lGxck9wAKw&s",
+        },
+        
+        {
           name: "JavaScript",
           image:
             "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
@@ -50,9 +56,9 @@ export const Bio = {
             "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
         },
         {
-          name: "Redux",
+          name: "Next Js",
           image:
-            "https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyya9RHo3mreo1_8Ha8ccZtAUUpaCQrN4WxA&s",
         },
         
     
@@ -94,17 +100,12 @@ export const Bio = {
       title: "Additional",
       skills: [
         {
-          name: "Linux",
-          image:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRdKovOa8lVKIjdmfwrvfp_VEnlCZu41jaDd6uvg00mw&s",
-        },
-        {
-          name: "Python Programming",
+          name: "Python",
           image:
             "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
         },
         {
-          name: "Java Programming",
+          name: "Java",
           image:
             "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
         },
@@ -117,18 +118,10 @@ export const Bio = {
           image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXk1KazwxBr0WhH8JrlzaSOnmuGkX0wRdrTA&s",
       
         },
-       
-        
-        
-      ],
-    },
-    {
-      title: "Tools",
-      skills: [
         {
-          name: "Kali Linux",
+          name: "Linux",
           image:
-            "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.2AV-e-3swfI-Nu9SbSanCAAAAA%26pid%3DApi&f=1&ipt=64c658e1453f716e6f1ab464374eeae0b6e5463acdb97b9c65ca1d3b215f0418&ipo=images",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRdKovOa8lVKIjdmfwrvfp_VEnlCZu41jaDd6uvg00mw&s",
         },
         {
           name: "Git",
@@ -139,6 +132,22 @@ export const Bio = {
           name: "GitHub",
           image:
             "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+        },
+        
+        
+      ],
+    },
+    {
+      title: "Tools",
+      skills: [
+        {
+          name: "Docker",
+          image:
+            "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png",
+        },
+        {
+          name: "Arcjet",
+          image: "https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/tdvgk6r6zuyjlrrba9ni"
         },
         {
           name: "Netlify",
@@ -176,7 +185,7 @@ export const Bio = {
       school: "BV Raju Institute of Technology, Narsapur, Medak",
       date: "Oct 2020 - Jun 2024",
       grade: "8.96 CGPA",
-      desc: "I am currently pursuing a Bachelor's degree in Information Technology and Engineering at BV Raju Institute Of Technology. I have completed 7 semesters and have a CGPA of 8.86. I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others.",
+      desc: "I have completed a Bachelor’s degree in Information Technology from BV Raju Institute of Technology with a CGPA of 8.92 . I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others.",
       degree: "Bachelor of Technology - BTech, Information Technology and Engineering",
     },
     {
