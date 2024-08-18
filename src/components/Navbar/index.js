@@ -31,7 +31,7 @@ const Navbar = () => {
           <NavLink href='#contact'>Contact</NavLink>
         </NavItems>
         <ButtonContainer>
-        <SocialMediaButtons href="https://leetcode.com/VIGNESH_12B2/" target="_blank">LeetCode</SocialMediaButtons>
+          <SocialMediaButtons href="https://leetcode.com/VIGNESH_12B2/" target="_blank">LeetCode</SocialMediaButtons>
           <SocialMediaButtons href="linkedin.com/in/vignesh-thipparthi" target="_blank"><LinkedInIcon/></SocialMediaButtons>
           <SocialMediaButtons href={Bio.github} target="_blank"><GitHub/></SocialMediaButtons>
         </ButtonContainer>
@@ -54,7 +54,7 @@ const Navbar = () => {
               setIsOpen(!isOpen)
             }}>Contact</MobileLink>
             <SocialMediaButtons style={{ marginLeft:'-9px',color: 'white', width: 'max-content',fontWeight: '500',fontSize:'16px' }} href={Bio.github} target="_blank">Github</SocialMediaButtons>
-            <SocialMediaButtons style={{ marginLeft:'-9px',color: 'white', width: 'max-content',fontWeight: '500',fontSize:'16px' }} href="https://leetcode.com/VIGNESH_12B2/" target="_blank">LinkedIn</SocialMediaButtons>
+            <SocialMediaButtons style={{ marginLeft:'-9px',color: 'white', width: 'max-content',fontWeight: '500',fontSize:'16px' }} href="linkedin.com/in/vignesh-thipparthi" target="_blank">LinkedIn</SocialMediaButtons>
             <SocialMediaButtons style={{ marginLeft:'-9px',color: 'white', width: 'max-content',fontWeight: '500',fontSize:'16px' }} href="https://leetcode.com/VIGNESH_12B2/" target="_blank">LeetCode</SocialMediaButtons>
           </MobileMenu>
         }
