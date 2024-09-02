@@ -185,7 +185,7 @@ export const Bio = {
       school: "BV Raju Institute of Technology, Narsapur, Medak",
       date: "Oct 2020 - Jun 2024",
       grade: "8.96 CGPA",
-      desc: "I have completed a Bachelor’s degree in Information Technology from BV Raju Institute of Technology with a CGPA of 8.92 . I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others.",
+      desc: "I have completed a Bachelor’s degree in Information Technology from BV Raju Institute of Technology with a CGPA of 8.96 . I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others.",
       degree: "Bachelor of Technology - BTech, Information Technology and Engineering",
     },
     {
