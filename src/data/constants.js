@@ -2,6 +2,7 @@ import Deep from '../images/DeepfakeDetection.jpg';
 import Todos from '../images/Todos.png';
 import Weather from '../images/Weather.png';
 import quiz from '../images/Quizapp.png';
+import logo from '../images/nexlogo.png'
 export const Bio = {
     name: "VIGNESH THIPPARTHI",
     roles: [
@@ -15,7 +16,7 @@ export const Bio = {
       "I am a driven and adaptable professional, consistently seeking out new opportunities for growth. Committed to excellence, I prioritize delivering exceptional outcomes. Possessing an optimistic outlook and a proactive approach, I am poised to bring valuable contributions and attain remarkable milestones.",
     github: "https://github.com/vignesh3022",
     resume:
-      "https://drive.google.com/file/d/12Qx96jBO3GiXLReuEzTS5ZbOnktCe2lS/view?usp=drivesdk",
+      "https://drive.google.com/file/d/14kase3-ibn2nPnpJttwlUKquPZvh9R63/view?usp=drivesdk",
     linkedin: " https://www.linkedin.com/in/vignesh-thipparthi/",
     Leetcode: "https://leetcode.com/VIGNESH_12B2/",
     insta: "https://www.instagram.com/t.vignesh_3004?igsh=MXd3OHkyczV5N25kdQ==",
@@ -177,7 +178,49 @@ export const Bio = {
       ],
     },
   ];
-  
+
+  export const experiences = [
+    {
+      id: 0,
+      img: logo,
+      role: "SDE Intern",
+      company: "NexZap",
+      date: "June 2024 - Present",
+      desc: "Working on building customized SaaS solutions tailored to meet unique business needs.",
+      projects: [
+        {
+          title: "NexZap Tagflo",
+          desc: "Real-time asset tracking solution with PIN-based authentication, image capture for verification, and comprehensive analytics.",
+          points: [
+            "Built a shift management system with Next.js, React, and TypeScript, integrating Clerk for authentication and Deputy API for real-time operations",
+            "Developed RESTful APIs for employee sync, Inventory assignments, and shift logging using PostgreSQL",
+            "Configured containerized deployment using Docker and Azure Container Registry for scalable architecture"
+          ]
+        },
+        {
+          title: "NexZap Wallet",
+          desc: "Custom gift card management system",
+          points: [
+            "Built a Responsive landing page using React with component-based architecture and React Router",
+            "Developed customer voucher management UI and led backend integration with Arcjet security",
+            "Implemented secure API handling for voucher data and payments across iOS and Android platforms"
+          ]
+        }
+      ],
+      skills: [
+        "Docker",
+        "Azure",
+        "PostgreSQL",
+        "TypeScript",
+        "Next.js",
+        "React",
+        "Node.js",
+        "Clerk Auth",
+        "RESTful APIs",
+        "Arcjet"
+      ]
+    }
+  ];  
   export const education = [
     {
       id: 1,
@@ -185,12 +228,12 @@ export const Bio = {
       school: "BV Raju Institute of Technology, Narsapur, Medak",
       date: "Oct 2020 - Jun 2024",
       grade: "8.96 CGPA",
-      desc: "I have completed a Bachelor’s degree in Information Technology from BV Raju Institute of Technology with a CGPA of 8.96 . I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others.",
+      desc: "I completed my Bachelor’s degree in Information Technology from B V Raju Institute of Technology with a CGPA of 8.96 . I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others.",
       degree: "Bachelor of Technology - BTech, Information Technology and Engineering",
     },
     {
       id: 2,
-      img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.logolynx.com%2Fimages%2Flogolynx%2F33%2F338f2c4e0d48a27ed6ad2a72821d3721.jpeg&f=1&nofb=1&ipt=780262f41ace27715c6b7c3f137f5e962569773c8e0f559da5167edcf00a5941&ipo=images",
+      img: "https://content.jdmagicbox.com/comp/hyderabad/h7/040pxx40.xx40.161118011529.v1h7/catalogue/narayana-junior-college-ecil-hyderabad-junior-colleges-1kjuim2bmp.jpg",
       school: "Narayana Junior College, Hyderabad",
       date: "Jun 2017 - Apr 2019",
       grade: "93.5%",

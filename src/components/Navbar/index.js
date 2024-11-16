@@ -6,6 +6,7 @@ import { Bio } from '../../data/constants';
 import { useTheme } from 'styled-components';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { GitHub } from '@mui/icons-material';
+import styled from 'styled-components'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -33,8 +34,6 @@ const Navbar = () => {
           <NavLink href="https://www.linkedin.com/in/vignesh-thipparthi/" target="_blank"><LinkedInIcon/></NavLink>
           <NavLink href={Bio.github} target="_blank"><GitHub/></NavLink>
         </NavItems>
-          
-
         {
           isOpen &&
           <MobileMenu isOpen={isOpen}>
@@ -53,9 +52,9 @@ const Navbar = () => {
             <MobileLink href='#contact' onClick={() => {
               setIsOpen(!isOpen)
             }}>Contact</MobileLink>
-            <MobileLink  target="_blank">Github</MobileLink>
-            <MobileLink  href="https://www.linkedin.com/in/vignesh-thipparthi/" target="_blank">LinkedIn</MobileLink>
-            <MobileLink  href="https://leetcode.com/VIGNESH_12B2/" target="_blank">LeetCode</MobileLink>
+            <MobileLink target="_blank">Github</MobileLink>
+            <MobileLink href="https://www.linkedin.com/in/vignesh-thipparthi/" target="_blank">LinkedIn</MobileLink>
+            <MobileLink href="https://leetcode.com/VIGNESH_12B2/" target="_blank">LeetCode</MobileLink>
           </MobileMenu>
         }
       </NavbarContainer>
