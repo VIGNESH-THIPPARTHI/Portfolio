@@ -13,10 +13,10 @@ export const Bio = {
 
     ],
     description:
-      "I am a driven and adaptable professional, consistently seeking out new opportunities for growth. Committed to excellence, I prioritize delivering exceptional outcomes. Possessing an optimistic outlook and a proactive approach, I am poised to bring valuable contributions and attain remarkable milestones.",
+      "I am a Results-driven and adaptable professional with a commitment to excellence and a proven ability to deliver impactful outcomes. Proactive and innovative, I thrive in dynamic environments, consistently exceeding expectations and contributing to organizational success.",
     github: "https://github.com/vignesh3022",
     resume:
-      "https://drive.google.com/file/d/14kase3-ibn2nPnpJttwlUKquPZvh9R63/view?usp=drivesdk",
+      "https://drive.google.com/file/d/16-NoHxSRepHXCExyBE-D-Yr6lSRFMZK_/view?usp=drivesdk",
     linkedin: " https://www.linkedin.com/in/vignesh-thipparthi/",
     Leetcode: "https://leetcode.com/VIGNESH_12B2/",
     insta: "https://www.instagram.com/t.vignesh_3004?igsh=MXd3OHkyczV5N25kdQ==",
@@ -24,7 +24,7 @@ export const Bio = {
   
   export const skills = [
     {
-      title: "Frontend",
+      title: "Frontend Development",
       skills: [
         {
           name: "HTML",
@@ -32,49 +32,43 @@ export const Bio = {
         },
         {
           name: "CSS",
-          image:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
         },
         {
           name: "Bootstrap",
-          image:
-            "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
+          image: "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
         },
         {
-          name: "Tailwind CSS",
-          image:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNhoXisDruJMDAq3Ltd-wuaMW2lGxck9wAKw&s",
+          name: "Tailwind",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNhoXisDruJMDAq3Ltd-wuaMW2lGxck9wAKw&s",
         },
-        
         {
           name: "JavaScript",
-          image:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
         },
         {
-          name: "React Js",
-          image:
-            "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
+          name: "React.Js",
+          image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
         },
         {
-          name: "Next Js",
-          image:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyya9RHo3mreo1_8Ha8ccZtAUUpaCQrN4WxA&s",
+          name: "Next.Js",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyya9RHo3mreo1_8Ha8ccZtAUUpaCQrN4WxA&s",
         },
-        
-    
-        
-      ],
+        {
+          name: "Flutter",
+          image: "https://cdn.prod.website-files.com/6047a9e35e5dc54ac86ddd90/63018720eab248248ff88ee3_1bd86e15.png",
+        }
+      ]
     },
     {
-      title: "Backend",
+      title: "Backend Development",
       skills: [
         {
-          name: "Node Js",
+          name: "Node.js",
           image: "https://nodejs.org/static/images/logo.svg",
         },
         {
-          name: "Express Js",
+          name: "Express.js",
           image: "https://img.icons8.com/?size=128&id=2ZOaTclOqD4q&format=png",
         },
         {
@@ -82,7 +76,7 @@ export const Bio = {
           image: "https://img.icons8.com/?size=96&id=74402&format=png",
         },
         {
-          name: "Postgresql",
+          name: "PostgreSQL",
           image: "https://www.postgresql.org/media/img/about/press/elephant.png",
         },
         {
@@ -90,92 +84,98 @@ export const Bio = {
           image:
             "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
         },
-        {
-          name: "Firebase",
-          image: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
-        },
-      ],
+        // {
+        //   name: "Firebase",
+        //   image: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
+        // }
+      ]
     },
-    
     {
-      title: "Additional",
+      title: "Programming Languages",
       skills: [
         {
           name: "Python",
-          image:
-            "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+          image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
         },
         {
           name: "Java",
-          image:
-            "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
+          image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
         },
         {
-          name:"OOPS",
-          image:"https://res.cloudinary.com/practicaldev/image/fetch/s--ymOHw4aF--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/rewxsx85fqmolo6r49p9.jpg",
+          name: "Kotlin",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXk1KazwxBr0WhH8JrlzaSOnmuGkX0wRdrTA&s",
         },
         {
-          name:"Kotlin",
-          image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXk1KazwxBr0WhH8JrlzaSOnmuGkX0wRdrTA&s",
-      
+          name: "SQL",
+          image: "https://w7.pngwing.com/pngs/525/959/png-transparent-microsoft-azure-sql-database-microsoft-sql-server-cloud-computing-text-trademark-logo-thumbnail.png",
         },
         {
-          name: "Linux",
-          image:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRdKovOa8lVKIjdmfwrvfp_VEnlCZu41jaDd6uvg00mw&s",
-        },
+          name: "JavaScript",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
+        }
+      ]
+    },
+    {
+      title: "DevOps & Tools",
+      skills: [
         {
           name: "Git",
-          image:
-            "https://e7.pngegg.com/pngimages/713/558/png-clipart-computer-icons-pro-git-github-logo-text-logo-thumbnail.png",
+          image: "https://e7.pngegg.com/pngimages/713/558/png-clipart-computer-icons-pro-git-github-logo-text-logo-thumbnail.png",
         },
         {
           name: "GitHub",
-          image:
-            "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+          image: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
         },
-        
-        
-      ],
-    },
-    {
-      title: "Tools",
-      skills: [
         {
           name: "Docker",
-          image:
-            "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png",
+          image: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png",
+        },
+        {
+          name: "Postman",
+          image: "https://www.cdnlogo.com/logos/p/20/postman.svg",
         },
         {
           name: "Arcjet",
-          image: "https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/tdvgk6r6zuyjlrrba9ni"
-        },
-        {
-          name: "Netlify",
-          image:
-            "https://seeklogo.com/images/N/netlify-logo-BD8F8A77E2-seeklogo.com.png",
+          image: "https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/tdvgk6r6zuyjlrrba9ni",
         },
         {
           name: "VS Code",
-          image:
-            "https://img.icons8.com/?size=96&id=9OGIyU8hrxW5&format=png",
+          image: "https://img.icons8.com/?size=96&id=9OGIyU8hrxW5&format=png",
+        },
+        {
+          name: "Android Studio",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Android_Studio_icon_%282023%29.svg/640px-Android_Studio_icon_%282023%29.svg.png",
         },
         {
           name: "Vercel",
-          image:
-          "https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png",
-
+          image: "https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png",
         },
+      ]
+    },
+    {
+      title: "Additional Skills",
+      skills: [
         {
           name: "Jupyter",
-          image:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1767px-Jupyter_logo.svg.png",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1767px-Jupyter_logo.svg.png",
         },
         {
           name: "Google Colab",
-          image:"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.laYIzRY2A-jpnBA2rO2jSQHaEj%26pid%3DApi&f=1&ipt=a91db9d15134be512d993ddb890716d355294fb5b46f6525e623f9980525298f&ipo=images",
+          image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.laYIzRY2A-jpnBA2rO2jSQHaEj%26pid%3DApi&f=1&ipt=a91db9d15134be512d993ddb890716d355294fb5b46f6525e623f9980525298f&ipo=images",
         },
-      ],
+        {
+          name: "Object-Oriented Programming",
+          image:"https://res.cloudinary.com/practicaldev/image/fetch/s--ymOHw4aF--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/rewxsx85fqmolo6r49p9.jpg",
+        },
+        {
+          name: "Linux",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRdKovOa8lVKIjdmfwrvfp_VEnlCZu41jaDd6uvg00mw&s",
+        },
+        {
+          name: "Debugging",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_SLaPRiMQ7wD4zp3qPLtySyPNjhKpdpDkoA&s",
+        },
+      ]
     },
   ];
 
@@ -219,7 +219,7 @@ export const Bio = {
         "RESTful APIs",
         "Arcjet"
       ]
-    }
+    },
   ];  
   export const education = [
     {
@@ -228,7 +228,7 @@ export const Bio = {
       school: "BV Raju Institute of Technology, Narsapur, Medak",
       date: "Oct 2020 - Jun 2024",
       grade: "8.96 CGPA",
-      desc: "I completed my Bachelor’s degree in Information Technology from B V Raju Institute of Technology with a CGPA of 8.96 . I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others.",
+      desc: "I earned my Bachelor’s degree in Information Technology from B V Raju Institute of Technology with a commendable CGPA of 8.96. My coursework includes key subjects such as Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others.",
       degree: "Bachelor of Technology - BTech, Information Technology and Engineering",
     },
     {
@@ -237,7 +237,7 @@ export const Bio = {
       school: "Narayana Junior College, Hyderabad",
       date: "Jun 2017 - Apr 2019",
       grade: "93.5%",
-      desc: "I completed my class 12 high school education at Narayana Junior College, Hyderabad, where I studied Maths, Physics and Chemistry.",
+      desc: "I completed my Class 12 education at Narayana Junior College, Hyderabad, with a focus on Mathematics, Physics, and Chemistry.",
       degree: "TSBIE(XII), MPC",
     },
     {
@@ -273,7 +273,7 @@ export const Bio = {
       description:
         "A React JS weather web app offering real-time weather data retrieval. Users can search by city or use automatic location detection. Integrated with the OpenWeatherMap API, it displays temperature in Celsius/Fahrenheit, humidity, and wind speed. The background image changes with weather conditions, enhancing visual appeal.",
       image: Weather,
-      tags: ["React JS", "Axios", "Bootstrap", "Tailwind CSS","React Icons","React Toastify"],
+      tags: ["React JS", "Axios", "Bootstrap", "Tailwind","React Icons","React Toastify"],
       category: "web app",
       github: "https://github.com/vignesh3022/React-project-Weatherapp",
       webapp: "https://our-weather-app.vercel.app/",

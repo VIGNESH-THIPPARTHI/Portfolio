@@ -3,21 +3,19 @@ import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, MobileIcon, Mob
 import { DiCssdeck } from 'react-icons/di';
 import { FaBars } from 'react-icons/fa';
 import { Bio } from '../../data/constants';
-import { useTheme } from 'styled-components';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { GitHub } from '@mui/icons-material';
-import styled from 'styled-components'
-
+import { GitHub, Email } from '@mui/icons-material';
+import LeetCodeIcon from '../Icons/LeetCodeIcon';
+  
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const theme = useTheme()
   return (
     <Nav>
       <NavbarContainer>
         <NavLogo to='/'>
-          <a style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20;', cursor: 'pointer' }}>
+          <button style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20;', cursor: 'pointer', background: 'none', border: 'none' }} onClick={() => window.location.href = '/'}>
             <DiCssdeck size="3rem" /> <Span>Portfolio</Span>
-          </a>
+          </button>
         </NavLogo>
         <MobileIcon>
           <FaBars onClick={() => {
@@ -27,10 +25,13 @@ const Navbar = () => {
         <NavItems>
           <NavLink href="#about">About</NavLink>
           <NavLink href='#skills'>Skills</NavLink>
+          <NavLink href='#experience'>Experience</NavLink>
           <NavLink href='#projects'>Projects</NavLink>
           <NavLink href='#education'>Education</NavLink>
-          <NavLink href='#contact'>Contact</NavLink>
-          <NavLink href="https://leetcode.com/VIGNESH_12B2/" target="_blank">LeetCode</NavLink>
+          <NavLink href='#contact'><Email/></NavLink>
+          <NavLink href="https://leetcode.com/VIGNESH_12B2/" target="_blank">
+            <LeetCodeIcon />
+          </NavLink>
           <NavLink href="https://www.linkedin.com/in/vignesh-thipparthi/" target="_blank"><LinkedInIcon/></NavLink>
           <NavLink href={Bio.github} target="_blank"><GitHub/></NavLink>
         </NavItems>
@@ -43,6 +44,9 @@ const Navbar = () => {
             <MobileLink href='#skills' onClick={() => {
               setIsOpen(!isOpen)
             }}>Skills</MobileLink>
+            <MobileLink href='#experience' onClick={() => {
+              setIsOpen(!isOpen)
+            }}>Experience</MobileLink>
             <MobileLink href='#projects' onClick={() => {
               setIsOpen(!isOpen)
             }}>Projects</MobileLink>

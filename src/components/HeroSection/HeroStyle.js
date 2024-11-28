@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import _default from "../../themes/themes";
 
 export const HeroContainer = styled.div`
   background: ${({ theme }) => theme.card_light};
@@ -123,6 +122,14 @@ export const Title = styled.div`
     font-size: 40px;
     line-height: 48px;
     margin-bottom: 8px;
+  }
+
+  animation: float 3s ease-in-out infinite;
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
   }
 `;
 

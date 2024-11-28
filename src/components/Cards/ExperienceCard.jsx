@@ -22,9 +22,9 @@ text-overflow: ellipsis;
 `
 
 const Card = styled.div`
-    width: 650px;
-    border-radius: 10px;
-    padding: 12px 16px;
+    width: 800px;
+    border-radius: 16px;
+    padding: 20px 24px;
     justify-content: space-between;
     position: relative;
     overflow: hidden;
@@ -33,22 +33,10 @@ const Card = styled.div`
     gap: 12px;
     transition: all 0.3s ease-in-out;
     background: ${({ theme }) => theme.card};
-    border: 0.1px solid ${({ theme }) => theme.primary + 20};
-    box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+    border: 1px solid ${({ theme }) => theme.primary + '20'};
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 
-    &:hover {
-        box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
-        transform: translateY(-5px);
-        border-color: ${({ theme }) => theme.primary};
-    }
-
-    @media only screen and (max-width: 768px){
-        padding: 10px;
-        gap: 8px;
-        width: 300px;
-    }
-
-    &::before {
+    &:before {
         content: '';
         position: absolute;
         top: 0;
@@ -58,14 +46,25 @@ const Card = styled.div`
         background: linear-gradient(
             225deg,
             ${({ theme }) => theme.primary + '20'} 0%,
-            ${({ theme }) => theme.card} 100%
+            transparent 100%
         );
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
     }
 
-    &:hover::before {
-        opacity: 1;
+    &:hover {
+        transform: translateY(-5px);
+        border-color: ${({ theme }) => theme.primary};
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        
+        &:before {
+            opacity: 1;
+        }
+    }
+
+    @media (max-width: 768px){
+        width: 300px;
+        padding: 16px;
     }
 `;
 
@@ -82,18 +81,24 @@ const ExpandedContent = styled.div`
 const Top = styled.div`
     width: 100%;
     display: flex;
-    gap: 12px
-`
+    gap: 16px;
+`;
 
 const Image = styled.img`
-    height: 50px;
-    background-color: #000;
-    border-radius: 10px;
+    height: 60px;
+    background-color: transparent;
+    border-radius: 12px;
     margin-top: 4px;
-    @media only screen and (max-width: 768px){
-        height: 40px;
+    transition: transform 0.3s ease;
+    
+    ${Card}:hover & {
+        transform: scale(1.1) rotate(-5deg);
     }
-`
+
+    @media (max-width: 768px){
+        height: 45px;
+    }
+`;
 
 const Body = styled.div`
     width: 100%;
@@ -135,8 +140,7 @@ const Skills = styled.div`
     display: flex;
     gap: 12px;
     margin-top: 10px;
-    position: relative;
-    z-index: 2;
+    flex-wrap: wrap;
 `;
 
 const ItemWrapper = styled.div`
@@ -149,18 +153,46 @@ const Skill = styled.div`
     font-size: 15px;
     font-weight: 400;
     color: ${({ theme }) => theme.text_primary};
-    padding: 2px 8px;
-    border-radius: 12px;
+    padding: 8px 16px;
+    border-radius: 20px;
     background-color: ${({ theme }) => theme.primary + "20"};
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease;
 
-    @media only screen and (max-width: 768px){
-        font-size: 12px;
+
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+            to right,
+            rgba(255,255,255,0) 0%,
+            rgba(255,255,255,0.3) 50%,
+            rgba(255,255,255,0) 100%
+        );
+        transform: rotate(45deg);
+        animation: shine 3s infinite;
     }
 
-    ${Card}:hover & {
-        background-color: ${({ theme }) => theme.primary + "40"};
-        color: ${({ theme }) => theme.text_primary};
+    @keyframes shine {
+        0% { transform: translateX(-100%) rotate(45deg); }
+        100% { transform: translateX(100%) rotate(45deg); }
+    }
+
+    &:hover {
+        background-color: ${({ theme }) => theme.primary};
+        color: ${({ theme }) => theme.white};
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 768px){
+        font-size: 12px;
+        padding: 6px 12px;
     }
 `;
 

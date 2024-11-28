@@ -71,6 +71,13 @@ const Image = styled.img`
     border-radius: 12px;
     margin-top: 30px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+
+  @media (max-width: 768px) {
+    height: 250px;
+  }
 `;
 
 const Label = styled.div`
@@ -101,6 +108,30 @@ const Tag = styled.div`
     padding: 4px 8px;
     border-radius: 8px;
     background-color: ${({ theme }) => theme.primary + 20};
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+            to right,
+            rgba(255,255,255,0) 0%,
+            rgba(255,255,255,0.3) 50%,
+            rgba(255,255,255,0) 100%
+        );
+        transform: rotate(45deg);
+        animation: shine 3s infinite;
+    }
+
+    @keyframes shine {
+        0% { transform: translateX(-100%) rotate(45deg); }
+        100% { transform: translateX(100%) rotate(45deg); }
+    }
     @media only screen and (max-width: 600px) {
         font-size: 12px;
     }

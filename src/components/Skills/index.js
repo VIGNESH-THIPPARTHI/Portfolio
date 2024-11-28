@@ -95,6 +95,12 @@ const SkillList = styled.div`
   margin-bottom: 20px;
 `
 
+const SkillImage = styled.img`
+  width: 24px;
+  height: 24px;
+  transition: all 0.8s ease-in-out;
+`
+
 const SkillItem = styled.div`
   font-size: 16px;
   font-weight: 400;
@@ -116,26 +122,47 @@ const SkillItem = styled.div`
     padding: 6px 12px;
   }
   transition: all 0.5s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  background: ${({ theme }) => theme.card};
+  
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    transform: translateX(-100%);
+    transition: 0.5s;
+  }
+
+  &:hover:before {
+    transform: translateX(100%);
+  }
+
   &:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 0 50px 4px rgba(0,0,0,0.6);
-    filter: brightness(1.1);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+
+  &:hover ${SkillImage} {
+    transform: rotate(360deg) scale(1.1);
+  }
 }
   
 `
-
-const SkillImage = styled.img`
-  width: 24px;
-  height: 24px;
-`
-
 
 const Skills = () => {
   return (
     <Container id="skills">
       <Wrapper>
         <Title>Skills</Title>
-        <Desc>Here are some of my skills on which I have been working on for the past 2 years.
+        <Desc>Over the past two years, I have been actively developing and refining the following skills.
         </Desc>
         <SkillsContainer>
           {skills.map((skill) => (

@@ -1,8 +1,5 @@
-import React, {useState} from "react";
+import React from "react";
 import styled from "styled-components";
-
-import emailjs from "@emailjs/browser";
-
 
 const Container = styled.div`
   display: flex;
@@ -54,58 +51,9 @@ const Desc = styled.div`
   }
 `;
 
-const ContactForm = styled.form`
-  width: 95%;
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  background-color: ${({ theme }) => theme.card};
-  padding: 32px;
-  border-radius: 16px;
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
-  margin-top: 28px;
-  gap: 12px;
-`;
 
-const ContactTitle = styled.div`
-  font-size: 24px;
-  margin-bottom: 6px;
-  font-weight: 600;
-  color: ${({ theme }) => theme.text_primary};
-`;
+const ContactButton = styled.button`
 
-const ContactInput = styled.input`
-  flex: 1;
-  background-color: transparent;
-  border: 1px solid ${({ theme }) => theme.text_secondary};
-  outline: none;
-  font-size: 18px;
-  color: ${({ theme }) => theme.text_primary};
-  border-radius: 12px;
-  padding: 12px 16px;
-  &:focus {
-    border: 1px solid ${({ theme }) => theme.primary};
-  }
-`;
-
-const ContactInputMessage = styled.textarea`
-  flex: 1;
-  background-color: transparent;
-  border: 1px solid ${({ theme }) => theme.text_secondary};
-  outline: none;
-  font-size: 18px;
-  color: ${({ theme }) => theme.text_primary};
-  border-radius: 12px;
-  padding: 12px 16px;
-  &:focus {
-    border: 1px solid ${({ theme }) => theme.primary};
-  }
-`;
-
-const ContactButton = styled.input`
-  width: 100%;
-  text-decoration: none;
-  text-align: center;
   background: hsla(271, 100%, 50%, 1);
   background: linear-gradient(
     225deg,
@@ -122,45 +70,51 @@ const ContactButton = styled.input`
     hsla(271, 100%, 50%, 1) 0%,
     hsla(294, 100%, 50%, 1) 100%
   );
-  padding: 13px 16px;
-  margin-top: 2px;
-  border-radius: 12px;
-  border: none;
   color: ${({ theme }) => theme.text_primary};
-  font-size: 18px;
-  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  
+  transition: all 0.3s ease;
+  &:hover {
+    color: ${({ theme }) => theme.card};
+    transform: translateY(-2px);
+  }
+
+  svg {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover svg {
+    transform: translateX(4px);
+  }
 `;
 
+const ArrowIcon = styled.span`
+  display: inline-block;
+  transform: rotate(-45deg);
+  border: solid currentColor;
+  border-width: 0 2px 2px 0;
+  padding: 3px;
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+
+  ${ContactButton}:hover & {
+    transform: rotate(-45deg) translate(2px, 2px);
+  }
+`;
+
+
+
 const Contact = () => {
-  //hooks
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const serviceId = "service_vdl64yt";
-    const templateId = "template_a8u39nd";
-    const publicKey = "ql_bahwoVbkZ_eiNS";
-
-    const formData = {
-      to_name: "Vignesh",
-      from_name: name,
-      from_email: email,
-      message: message,
-
-    };
-    emailjs
-      .send(serviceId, templateId, formData, publicKey)
-      .then((response) => {
-        console.log("Email sent successfully",response);
-        setName('');
-        setEmail('');
-        setMessage('');
-      })
-      .catch((error) => {
-        console.log("Error sending email :",error);
-      });
+  const handleEmailClick = () => {
+    window.location.href = 'mailto:thipparthivignesh3004@gmail.com';
   };
 
   return (
@@ -168,16 +122,12 @@ const Contact = () => {
       <Wrapper>
         <Title>Contact</Title>
         <Desc>
-          Feel free to reach out to me for any questions or opportunities!
+        I’m available for any inquiries or collaboration opportunities—feel free to reach out!
         </Desc>
-        <ContactForm  onSubmit={handleSubmit}>
-          <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" type="text" value={email} onChange={(e)=>setEmail(e.target.value)} />
-          <ContactInput placeholder="Your Name" type="text" value={name} onChange={(e)=>setName(e.target.value)} />
-          <ContactInputMessage placeholder="Message" rows="6" type="text" value={message} onChange={(e)=>setMessage(e.target.value)} />
-          <ContactButton type="submit" value="Send" />
-        </ContactForm>
-        
+          <ContactButton onClick={handleEmailClick}>
+            Email Me 🚀
+            <ArrowIcon />
+          </ContactButton>
       </Wrapper>
     </Container>
   );

@@ -28,6 +28,13 @@ const Card = styled.div`
     flex-direction: column;
     gap: 14px;
     transition: all 0.5s ease-in-out;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    &:hover:before {
+        clip-path: circle(100% at 50% 50%);
+    }
+
     &:hover {
         transform: translateY(-10px);
         box-shadow: 0 0 50px 4px rgba(0,0,0,0.6);
@@ -44,6 +51,11 @@ const Image = styled.img`
     background-color: ${({ theme }) => theme.white};
     border-radius: 10px;
     box-shadow: 0 0 16px 2px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+
+    ${Card}:hover & {
+        transform: scale(1.05);
+    }
 `
 
 const Tags = styled.div`
@@ -62,6 +74,30 @@ const Tag = styled.span`
     background-color: ${({ theme }) => theme.primary + 15};
     padding: 2px 8px;
     border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+            to right,
+            rgba(255,255,255,0) 0%,
+            rgba(255,255,255,0.3) 50%,
+            rgba(255,255,255,0) 100%
+        );
+        transform: rotate(45deg);
+        animation: shine 3s infinite;
+    }
+
+    @keyframes shine {
+        0% { transform: translateX(-100%) rotate(45deg); }
+        100% { transform: translateX(100%) rotate(45deg); }
+    }
 `
 
 const Details = styled.div`
