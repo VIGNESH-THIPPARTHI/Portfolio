@@ -59,7 +59,7 @@ Feel free to use this portfolio template to build your own personal portfolio we
 
 ## Website
 
-Check out the deployed website at [https://vigneshthipparthi-portfolio.vercel.app/](https://vigneshthipparthi-portfolio.vercel.app/).
+Check out the deployed website at [portfolio](https://vigneshthipparthi-portfolio.vercel.app/).
 
 ## Contributing
 
