@@ -63,10 +63,40 @@ const Skill = styled.div`
   width: 100%;
   max-width: 500px;
   background: ${({ theme }) => theme.card};
-  border: 0.1px solid #854CE6;
+  border: 0.1px solid ${({ theme }) => theme.primary + '50'};
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   border-radius: 16px;
   padding: 18px 36px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.05),
+      transparent
+    );
+    transition: 0.5s;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: ${({ theme }) => theme.primary};
+    box-shadow: 0 0 20px ${({ theme }) => theme.primary + '50'};
+    
+    &::before {
+      left: 100%;
+    }
+  }
+
   @media (max-width: 768px) {
     max-width: 400px;
     padding: 10px 36px;
@@ -75,9 +105,7 @@ const Skill = styled.div`
     max-width: 330px;
     padding: 10px 36px;
   }
-
-
-`
+`;
 
 const SkillTitle = styled.h2`
   font-size: 28px;
@@ -113,6 +141,19 @@ const SkillItem = styled.div`
   justify-content: center;
   margin-bottom:5px;
   gap: 8px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 10px ${({ theme }) => theme.primary + '50'};
+    transform: translateY(-3px);
+    border-color: ${({ theme }) => theme.primary};
+    background: linear-gradient(
+      225deg,
+      ${({ theme }) => theme.primary + '20'} 0%,
+      transparent 100%
+    );
+  }
+
   @media (max-width: 768px) {
     font-size: 14px;
     padding: 8px 12px;

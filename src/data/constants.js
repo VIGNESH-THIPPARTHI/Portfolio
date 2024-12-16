@@ -253,19 +253,22 @@ export const Bio = {
   
   export const projects = [
 
+
     {
       id: 1,
-      title: "Todos Web App",
-      date: "Feb 2024",
-      description:
-        "Introducing Todos Website, your ultimate destination for streamlined task management and productivity. Seamlessly organize your to-do list while enjoying refreshing breaks with engaging games. With an intuitive interface and cross-device accessibility, staying organized has never been easier.Experience easy task management, including adding, deleting, and marking tasks as completed. Your tasks are securely stored locally, eliminating the need for sign-ups or password management. The distraction-free design fosters efficient organization, keeping you focused on your priorities.Explore our Energize Yourself section for stimulating games like Tic-Tac-Toe, Word Scramble, Memory Card, and Chess. Challenge yourself or compete with friends, revitalizing your mind and fostering creativity.",
-      image: Todos,
-      tags: ["HTML", "Javascript","CSS","Bootstrap","Anime.js","Local Storage" ],
-      category: "web app",
-      github: "https://github.com/vignesh3022/Todos",
-      webapp: "https://our-todos.netlify.app/",
+      title: "Deep Fake Face Detection",
+      date: "Jan 2024 - Apr 2024",
+      description: 
+        ["Implemented a robust Deepfake Face Detection System using Long Short-Term Memory (LSTM) networks and Xception architecture. The project aimed to address the rising concerns related to deepfake technologies, specifically targeting facial manipulation. The combination of LSTM, known for its sequential data handling capabilities, and Xception, a powerful convolutional neural network (CNN), enabled accurate and real-time detection of manipulated facial images.",
+        "Utilized LSTM networks for handling sequential data.",
+        "Implemented the Xception architecture for powerful feature extraction.",
+        "Addressed concerns related to deepfake technologies.",
+        "Targeted facial manipulation scenarios."],
+      
+      image: Deep,
+      tags: ["LSTM", "Xception","TensorFlow", "Keras","OpenCV", "Precision", "Recall", "F1-score"],
+      category: "machine learning",
     },
-    
     {
       id: 2,
       title: "Weather Web App",
@@ -280,7 +283,22 @@ export const Bio = {
 
     },
     {
+      
       id: 3,
+      title: "Todos Web App",
+      date: "Feb 2024",
+      description:
+        "Introducing Todos Website, your ultimate destination for streamlined task management and productivity. Seamlessly organize your to-do list while enjoying refreshing breaks with engaging games. With an intuitive interface and cross-device accessibility, staying organized has never been easier.Experience easy task management, including adding, deleting, and marking tasks as completed. Your tasks are securely stored locally, eliminating the need for sign-ups or password management. The distraction-free design fosters efficient organization, keeping you focused on your priorities.Explore our Energize Yourself section for stimulating games like Tic-Tac-Toe, Word Scramble, Memory Card, and Chess. Challenge yourself or compete with friends, revitalizing your mind and fostering creativity.",
+      image: Todos,
+      tags: ["HTML", "Javascript","CSS","Bootstrap","Anime.js","Local Storage" ],
+      category: "web app",
+      github: "https://github.com/vignesh3022/Todos",
+      webapp: "https://our-todos.netlify.app/",
+    },
+    
+
+    {
+      id: 4,
       title: "Quiz Web App",
       date: "Mar 2024",
       description:
@@ -291,21 +309,7 @@ export const Bio = {
       github: "https://github.com/vignesh3022/React-project-Quizapp",
       webapp: "https://our-quizapp.vercel.app/",
     },
-    {
-      id: 4,
-      title: "Deep Fake Face Detection",
-      date: "Jan 2024 - Apr 2024",
-      description: 
-        ["Implemented a robust Deepfake Face Detection System using Long Short-Term Memory (LSTM) networks and Xception architecture. The project aimed to address the rising concerns related to deepfake technologies, specifically targeting facial manipulation. The combination of LSTM, known for its sequential data handling capabilities, and Xception, a powerful convolutional neural network (CNN), enabled accurate and real-time detection of manipulated facial images.",
-        "Utilized LSTM networks for handling sequential data.",
-        "Implemented the Xception architecture for powerful feature extraction.",
-        "Addressed concerns related to deepfake technologies.",
-        "Targeted facial manipulation scenarios."],
-      
-      image: Deep,
-      tags: ["LSTM", "Xception","TensorFlow", "Keras","OpenCV", "Precision", "Recall", "F1-score"],
-      category: "machine learning",
-    },
+    
     {
       id: 5,
       title: "Smart Blind Stick",
