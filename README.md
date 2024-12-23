@@ -1,7 +1,7 @@
 
 # Portfolio
 
-This is a personal portfolio website project built with React.js. It showcases my skills, projects, education, and contact information.
+This is a personal portfolio website project built with React.js. It showcases my skills, experience, projects, education, and contact information.
 
 ## Introduction
 
