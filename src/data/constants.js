@@ -6,17 +6,18 @@ import logo from '../images/nexlogo.png'
 export const Bio = {
     name: "VIGNESH THIPPARTHI",
     roles: [
+      "Software Engineer",
       "Full Stack Enthusiast",
       "Programmer",
-      "UI/UX Developer",
-      "Cyber Security Enthusiast",
+      "ML Enthusiast",
+      "Cyber Security Fan",
 
     ],
     description:
       "I am a Results-driven and adaptable professional with a commitment to excellence and a proven ability to deliver impactful outcomes. Proactive and innovative, I thrive in dynamic environments, consistently exceeding expectations and contributing to organizational success.",
     github: "https://github.com/vignesh3022",
     resume:
-      "https://drive.google.com/file/d/16-NoHxSRepHXCExyBE-D-Yr6lSRFMZK_/view?usp=drivesdk",
+      "https://drive.google.com/file/d/18K_e-ieCLEe3okiOjPmLW1HzM3WfP9Ht/view?usp=drivesdk",
     linkedin: " https://www.linkedin.com/in/vignesh-thipparthi/",
     Leetcode: "https://leetcode.com/VIGNESH_12B2/",
     insta: "https://www.instagram.com/t.vignesh_3004?igsh=MXd3OHkyczV5N25kdQ==",
@@ -54,10 +55,10 @@ export const Bio = {
           name: "Next.Js",
           image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyya9RHo3mreo1_8Ha8ccZtAUUpaCQrN4WxA&s",
         },
-        {
-          name: "Flutter",
-          image: "https://cdn.prod.website-files.com/6047a9e35e5dc54ac86ddd90/63018720eab248248ff88ee3_1bd86e15.png",
-        }
+        // {
+        //   name: "Flutter",
+        //   image: "https://cdn.prod.website-files.com/6047a9e35e5dc54ac86ddd90/63018720eab248248ff88ee3_1bd86e15.png",
+        // }
       ]
     },
     {
@@ -142,10 +143,10 @@ export const Bio = {
           name: "VS Code",
           image: "https://img.icons8.com/?size=96&id=9OGIyU8hrxW5&format=png",
         },
-        {
-          name: "Android Studio",
-          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Android_Studio_icon_%282023%29.svg/640px-Android_Studio_icon_%282023%29.svg.png",
-        },
+        // {
+        //   name: "Android Studio",
+        //   image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Android_Studio_icon_%282023%29.svg/640px-Android_Studio_icon_%282023%29.svg.png",
+        // },
         {
           name: "Vercel",
           image: "https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png",
