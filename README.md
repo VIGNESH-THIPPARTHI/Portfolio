@@ -1,7 +1,7 @@
 
 # Portfolio
 
-This is a personal portfolio website project built with React.js. It showcases my skills, projects, education, and contact information.
+This is a personal portfolio website project built with React.js. It showcases my skills, experience, projects, education, and contact information.
 
 ## Introduction
 
@@ -11,6 +11,7 @@ This portfolio website serves as a digital resume and showcase of my work, skill
 
 - **Navbar:** Navigation bar with links to different sections of the portfolio.
 - **Skills:** Section displaying my technical skills and proficiency levels.
+- **Experience:** Section detailing my professional experience, including job titles, company names, durations, and key responsibilities and achievements.
 - **Projects:** Showcase of my projects with brief descriptions. Clicking on a project opens a modal with more details.
 - **Education:** Section highlighting my educational background.
 - **Contact:** Contact form for visitors to reach out to me.
