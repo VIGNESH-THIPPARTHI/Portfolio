@@ -15,7 +15,7 @@ export const Bio = {
     ],
     description:
       "I am a Results-driven and adaptable professional with a commitment to excellence and a proven ability to deliver impactful outcomes. Proactive and innovative, I thrive in dynamic environments, consistently exceeding expectations and contributing to organizational success.",
-    github: "https://github.com/vignesh3022",
+    github: "https://github.com/VIGNESH-THIPPARTHI",
     resume:
       "https://drive.google.com/file/d/18K_e-ieCLEe3okiOjPmLW1HzM3WfP9Ht/view?usp=drivesdk",
     linkedin: " https://www.linkedin.com/in/vignesh-thipparthi/",
@@ -269,9 +269,24 @@ export const Bio = {
       image: Deep,
       tags: ["LSTM", "Xception","TensorFlow", "Keras","OpenCV", "Precision", "Recall", "F1-score"],
       category: "machine learning",
+      github: "https://github.com/VIGNESH-THIPPARTHI/DeepFake-Face-Detection",
+      webapp: "https://shorturl.at/1Pxvm",
     },
     {
+      
       id: 2,
+      title: "Todos Web App",
+      date: "Feb 2024",
+      description:
+        "Todos - Task Management Application, your ultimate productivity hub for effortless organization and focus. Seamlessly create, categorize, and prioritize tasks with an intuitive interface designed for efficiency. With built-in features like a focus timer, task filtering, and bulk actions, managing your to-do list has never been easier. Enjoy a distraction-free experience while staying on top of deadlines, all without the need for sign-ups or password management. Customize your workflow, set reminders, and stay productive with a system built to enhance your efficiency. Take control of your tasks and maximize your productivity with Todos today! 🚀",
+      image: Todos,
+      tags: ["HTML", "Javascript","CSS","Bootstrap","Anime.js","Local Storage" ],
+      category: "web app",
+      github: "https://github.com/VIGNESH-THIPPARTHI/Todos",
+      webapp: "https://ourtodos.vercel.app/",
+    },
+    {
+      id: 3,
       title: "Weather Web App",
       date: "Mar 2024",
       description:
@@ -279,25 +294,10 @@ export const Bio = {
       image: Weather,
       tags: ["React JS", "Axios", "Bootstrap", "Tailwind","React Icons","React Toastify"],
       category: "web app",
-      github: "https://github.com/vignesh3022/React-project-Weatherapp",
+      github: "https://github.com/VIGNESH-THIPPARTHI/Nimbus-Now",
       webapp: "https://our-weather-app.vercel.app/",
 
-    },
-    {
-      
-      id: 3,
-      title: "Todos Web App",
-      date: "Feb 2024",
-      description:
-        "Introducing Todos Website, your ultimate destination for streamlined task management and productivity. Seamlessly organize your to-do list while enjoying refreshing breaks with engaging games. With an intuitive interface and cross-device accessibility, staying organized has never been easier.Experience easy task management, including adding, deleting, and marking tasks as completed. Your tasks are securely stored locally, eliminating the need for sign-ups or password management. The distraction-free design fosters efficient organization, keeping you focused on your priorities.Explore our Energize Yourself section for stimulating games like Tic-Tac-Toe, Word Scramble, Memory Card, and Chess. Challenge yourself or compete with friends, revitalizing your mind and fostering creativity.",
-      image: Todos,
-      tags: ["HTML", "Javascript","CSS","Bootstrap","Anime.js","Local Storage" ],
-      category: "web app",
-      github: "https://github.com/vignesh3022/Todos",
-      webapp: "https://our-todos.netlify.app/",
-    },
-    
-
+    },    
     {
       id: 4,
       title: "Quiz Web App",
@@ -307,7 +307,7 @@ export const Bio = {
       image:quiz,
       tags: ["React JS", "JavaScript", "HTML", "CSS"],
       category: "web app",
-      github: "https://github.com/vignesh3022/React-project-Quizapp",
+      github: "https://github.com/VIGNESH-THIPPARTHI/React-project-Quizapp",
       webapp: "https://our-quizapp.vercel.app/",
     },
     
