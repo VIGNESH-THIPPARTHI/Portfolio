@@ -17,7 +17,7 @@ export const Bio = {
       "I am a Results-driven and adaptable professional with a commitment to excellence and a proven ability to deliver impactful outcomes. Proactive and innovative, I thrive in dynamic environments, consistently exceeding expectations and contributing to organizational success.",
     github: "https://github.com/VIGNESH-THIPPARTHI",
     resume:
-      "https://drive.google.com/file/d/18K_e-ieCLEe3okiOjPmLW1HzM3WfP9Ht/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1DFiXg58ljDnuGMdY5pHuhttY_B_8Nu54/view?usp=drivesdk",
     linkedin: " https://www.linkedin.com/in/vignesh-thipparthi/",
     Leetcode: "https://leetcode.com/VIGNESH_12B2/",
     insta: "https://www.instagram.com/t.vignesh_3004?igsh=MXd3OHkyczV5N25kdQ==",
