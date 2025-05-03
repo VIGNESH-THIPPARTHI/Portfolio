@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
@@ -7,6 +7,8 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import { TimelineDot as MuiTimelineDot, TimelineConnector as MuiTimelineConnector } from '@mui/lab';
 import ExperienceCard from '../Cards/ExperienceCard';
 import { experiences } from '../../data/constants';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const Container = styled.div`
     display: flex;
@@ -38,16 +40,18 @@ const Wrapper = styled.div`
     }
 `;
 
-const Title = styled.div`
-font-size: 42px;
-text-align: center;
-font-weight: 600;
-margin-top: 20px;
-  color: ${({ theme }) => theme.text_primary};
-  @media (max-width: 768px) {
-      margin-top: 12px;
-      font-size: 32px;
-  }
+const Title = styled(motion.div)`
+    font-size: 42px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 20px;
+    background: linear-gradient(45deg, ${({ theme }) => theme.primary}, ${({ theme }) => theme.secondary});
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @media (max-width: 768px) {
+        margin-top: 12px;
+        font-size: 32px;
+    }
 `;
 
 const TimelineSection = styled.div`
@@ -128,12 +132,45 @@ const StyledTimelineItem = styled(TimelineItem)`
     }
 `;
 
-const index = () => {
+const ProgressBar = styled.div`
+    width: 100%;
+    height: 4px;
+    background: ${({ theme }) => theme.text_secondary + '20'};
+    border-radius: 2px;
+    margin-top: 20px;
+    overflow: hidden;
+`;
+
+const Progress = styled(motion.div)`
+    height: 100%;
+    background: linear-gradient(90deg, ${({ theme }) => theme.primary}, ${({ theme }) => theme.secondary});
+    border-radius: 2px;
+`;
+
+const Experience = () => {
+    const [progress, setProgress] = useState(0);
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.1
+    });
+
+    useEffect(() => {
+        if (inView) {
+            setProgress(100);
+        }
+    }, [inView]);
+
     return (
         <Container id="experience">
             <Wrapper>
-                <Title>Professional Journey</Title>
-                <TimelineSection>
+                <Title
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    Professional Journey
+                </Title>
+                <TimelineSection ref={ref}>
                     <Timeline>
                         {experiences.map((experience, index) => (
                             <StyledTimelineItem key={index}>
@@ -147,10 +184,17 @@ const index = () => {
                             </StyledTimelineItem>
                         ))}
                     </Timeline>
+                    <ProgressBar>
+                        <Progress
+                            initial={{ width: 0 }}
+                            animate={{ width: `${progress}%` }}
+                            transition={{ duration: 1, ease: "easeOut" }}
+                        />
+                    </ProgressBar>
                 </TimelineSection>
             </Wrapper>
         </Container>
     )
 }
 
-export default index
+export default Experience

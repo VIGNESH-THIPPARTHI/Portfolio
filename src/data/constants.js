@@ -7,8 +7,7 @@ export const Bio = {
     name: "VIGNESH THIPPARTHI",
     roles: [
       "Software Engineer",
-      "Full Stack Enthusiast",
-      "Programmer",
+      "Full Stack Developer",
       "ML Enthusiast",
       "Cyber Security Fan",
 
@@ -17,7 +16,7 @@ export const Bio = {
       "I am a Results-driven and adaptable professional with a commitment to excellence and a proven ability to deliver impactful outcomes. Proactive and innovative, I thrive in dynamic environments, consistently exceeding expectations and contributing to organizational success.",
     github: "https://github.com/VIGNESH-THIPPARTHI",
     resume:
-      "https://drive.google.com/file/d/1J4hDrd8SaHroRa_YRyA7Hz8ZNHPy7Rsx/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1MGvjxg8ZOBQ1c3KCDWkliv_dj18HmCPj/view?usp=drivesdk",
     linkedin: " https://www.linkedin.com/in/vignesh-thipparthi/",
     Leetcode: "https://leetcode.com/VIGNESH_12B2/",
     insta: "https://www.instagram.com/t.vignesh_3004?igsh=MXd3OHkyczV5N25kdQ==",
@@ -184,43 +183,74 @@ export const Bio = {
     {
       id: 0,
       img: logo,
-      role: "SDE Intern",
-      company: "NexZap",
-      date: "June 2024 - Present",
-      desc: "Working on building customized SaaS solutions tailored to meet unique business needs.",
+      role: "Software Development Engineer",
+      company: "Nexzap",
+      date: "Feb 2025 - Present",
+      desc: "Leading API development and system architecture improvements at Nexzap.",
       projects: [
         {
-          title: "NexZap Tagflo",
-          desc: "Real-time asset tracking solution with PIN-based authentication, image capture for verification, and comprehensive analytics.",
+          title: "API Design & Authentication",
+          desc: "Designed and implemented secure API infrastructure with comprehensive documentation and authentication systems.",
           points: [
-            "Built a shift management system with Next.js, React, and TypeScript, integrating Clerk for authentication and Deputy API for real-time operations",
-            "Developed RESTful APIs for employee sync, Inventory assignments, and shift logging using PostgreSQL",
-            "Configured containerized deployment using Docker and Azure Container Registry for scalable architecture"
+            "Designed RESTful APIs with Swagger/OpenAPI, achieving 100% API documentation coverage and reducing developer onboarding time by 40%",
+            "Implemented custom auth Clerk + JWT middleware based authentication using jsonwebtoken and JOSE, enabling secure API access for both web and Android clients"
           ]
         },
         {
-          title: "NexZap Wallet",
-          desc: "Custom gift card management system",
+          title: "Email Automation & Performance Monitoring",
+          desc: "Implemented automated systems and monitoring solutions to improve operational efficiency.",
           points: [
-            "Built a Responsive landing page using React with component-based architecture and React Router",
-            "Developed customer voucher management UI and led backend integration with Arcjet security",
-            "Implemented secure API handling for voucher data and payments across iOS and Android platforms"
+            "Automated inventory alerts with Resend.js, reducing reporting time from hours to minutes",
+            "Instrumented the back-end with OpenTelemetry SDKs to capture custom metrics and distributed traces",
+            "Integrated New Relic APM for real-time performance insights, reducing mean time to resolution (MTTR) by 60%"
           ]
         }
       ],
       skills: [
-        "Docker",
-        "Azure",
-        "PostgreSQL",
-        "TypeScript",
-        "Next.js",
-        "React",
-        "Node.js",
-        "Clerk Auth",
         "RESTful APIs",
-        "Arcjet"
+        "Swagger/OpenAPI",
+        "JWT",
+        "Clerk Auth",
+        "OpenTelemetry",
+        "New Relic",
+        "Resend.js",
+        "Performance Monitoring"
       ]
     },
+    {
+      id: 1,
+      img: logo,
+      role: "Software Development Engineer Intern",
+      company: "Nexzap",
+      date: "Apr 2024 - Jan 2025",
+      desc: "Contributed to frontend development and security implementations at Nexzap.",
+      projects: [
+        {
+          title: "Nexzap Company Website",
+          desc: "Developed and optimized the company website with modern web technologies.",
+          points: [
+            "Built a Nexzap company website using React, animations, and lazy loading, improving initial page load speed by 30% and enhancing user engagement"
+          ]
+        },
+        {
+          title: "Nexzap Wallet Security",
+          desc: "Enhanced security and user experience in the Nexzap Wallet application.",
+          points: [
+            "Developed customer voucher management UI and led backend integration",
+            "Actively participated in code reviews and collaborative debugging sessions during critical development sprints",
+            "Integrated Arcjet security protocols into Nexzap Wallet for live email validation, increasing transactional security by 50%"
+          ]
+        }
+      ],
+      skills: [
+        "React",
+        "Performance Optimization",
+        "UI Development",
+        "Arcjet Security",
+        "Code Review",
+        "Debugging"
+      ]
+    }
   ];  
   export const education = [
     {
@@ -229,7 +259,7 @@ export const Bio = {
       school: "BV Raju Institute of Technology, Narsapur, Medak",
       date: "Oct 2020 - Jun 2024",
       grade: "8.96 CGPA",
-      desc: "I earned my Bachelor’s degree in Information Technology from B V Raju Institute of Technology with a commendable CGPA of 8.96. My coursework includes key subjects such as Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others.",
+      desc: "I earned my Bachelor's degree in Information Technology from B V Raju Institute of Technology with a commendable CGPA of 8.96. My coursework includes key subjects such as Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others.",
       degree: "Bachelor of Technology - BTech, Information Technology and Engineering",
     },
     {
