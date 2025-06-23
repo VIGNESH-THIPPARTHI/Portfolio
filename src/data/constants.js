@@ -16,7 +16,7 @@ export const Bio = {
       "I am a Results-driven and adaptable professional with a commitment to excellence and a proven ability to deliver impactful outcomes. Proactive and innovative, I thrive in dynamic environments, consistently exceeding expectations and contributing to organizational success.",
     github: "https://github.com/VIGNESH-THIPPARTHI",
     resume:
-      "https://drive.google.com/file/d/1MGvjxg8ZOBQ1c3KCDWkliv_dj18HmCPj/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1V68t0qyxQLv7Ck5VFMZILwmQCsFV2jnT/view?usp=drivesdk",
     linkedin: " https://www.linkedin.com/in/vignesh-thipparthi/",
     Leetcode: "https://leetcode.com/VIGNESH_12B2/",
     insta: "https://www.instagram.com/t.vignesh_3004?igsh=MXd3OHkyczV5N25kdQ==",
@@ -131,6 +131,10 @@ export const Bio = {
           image: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png",
         },
         {
+          name: "New Relic",
+          image: "https://images.seeklogo.com/logo-png/44/1/new-relic-logo-png_seeklogo-441431.png",
+        },
+        {
           name: "Postman",
           image: "https://www.cdnlogo.com/logos/p/20/postman.svg",
         },
@@ -142,10 +146,10 @@ export const Bio = {
           name: "VS Code",
           image: "https://img.icons8.com/?size=96&id=9OGIyU8hrxW5&format=png",
         },
-        // {
-        //   name: "Android Studio",
-        //   image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Android_Studio_icon_%282023%29.svg/640px-Android_Studio_icon_%282023%29.svg.png",
-        // },
+        {
+          name: "Android Studio",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Android_Studio_icon_%282023%29.svg/640px-Android_Studio_icon_%282023%29.svg.png",
+        },
         {
           name: "Vercel",
           image: "https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png",
@@ -179,86 +183,140 @@ export const Bio = {
     },
   ];
 
+
   export const experiences = [
     {
       id: 0,
       img: logo,
-      role: "Software Development Engineer",
+      role: "Software Engineer",
       company: "Nexzap",
       date: "Feb 2025 - Present",
-      desc: "Leading API development and system architecture improvements at Nexzap.",
+      desc: "Spearheading development of Tagflo’s full-stack Admin Panel and driving scalable API infrastructure with a focus on observability, security, and performance.",
       projects: [
         {
-          title: "API Design & Authentication",
-          desc: "Designed and implemented secure API infrastructure with comprehensive documentation and authentication systems.",
+          title: "Admin Panel & Full-Stack Management",
+          desc: "Built a robust, scalable admin dashboard with employee, inventory, and site management features.",
           points: [
-            "Designed RESTful APIs with Swagger/OpenAPI, achieving 100% API documentation coverage and reducing developer onboarding time by 40%",
-            "Implemented custom auth Clerk + JWT middleware based authentication using jsonwebtoken and JOSE, enabling secure API access for both web and Android clients"
+            "Developed and maintained modules for stock management, employee PIN actions, site selection, tag scanning, and email reporting using modular React components and API integration",
+            "Enabled multi-tenant site management and token-based authentication using custom JWT middleware",
+            "Improved internal workflows by integrating OpenTelemetry for tracing, and Swagger/OpenAPI for complete API documentation"
           ]
         },
         {
-          title: "Email Automation & Performance Monitoring",
-          desc: "Implemented automated systems and monitoring solutions to improve operational efficiency.",
+          title: "API Design & Authentication",
+          desc: "Led end-to-end API architecture and secure authentication flows.",
           points: [
-            "Automated inventory alerts with Resend.js, reducing reporting time from hours to minutes",
-            "Instrumented the back-end with OpenTelemetry SDKs to capture custom metrics and distributed traces",
-            "Integrated New Relic APM for real-time performance insights, reducing mean time to resolution (MTTR) by 60%"
+            "Designed RESTful APIs with Swagger/OpenAPI, improving documentation coverage to 100% and reducing onboarding time by 40%",
+            "Implemented robust Clerk + JWT-based auth middleware using `jsonwebtoken` and `jose`, supporting secure access for both web and mobile"
+          ]
+        },
+        {
+          title: "Email Automation & Observability",
+          desc: "Introduced systems to monitor and automate internal operations.",
+          points: [
+            "Built automated inventory email alerts using Resend.js, reducing manual reporting hours",
+            "Instrumented backend services using OpenTelemetry SDKs and integrated with New Relic APM",
+            "Improved MTTR by 60% via custom metrics and distributed tracing"
           ]
         }
       ],
       skills: [
-        "RESTful APIs",
+        "Admin Dashboard",
+        "Full-Stack Development",
+        "Multi-Tenant Architecture",
+        "JWT Authentication",
         "Swagger/OpenAPI",
-        "JWT",
-        "Clerk Auth",
         "OpenTelemetry",
         "New Relic",
         "Resend.js",
-        "Performance Monitoring"
+        "Next.js",
+        "Docker"
       ]
     },
     {
       id: 1,
       img: logo,
-      role: "Software Development Engineer Intern",
+      role: "Software Engineering Intern",
       company: "Nexzap",
-      date: "Apr 2024 - Jan 2025",
-      desc: "Contributed to frontend development and security implementations at Nexzap.",
+      date: "Nov 2024 - Feb 2025",
+      desc: "Transitioned into an active engineering role, focusing on customer-facing features, wallet UI, and backend integrations.",
       projects: [
         {
-          title: "Nexzap Company Website",
-          desc: "Developed and optimized the company website with modern web technologies.",
+          title: "Customer Feedback & Wallet Security",
+          desc: "Enhanced product security and developed core wallet features.",
           points: [
-            "Built a Nexzap company website using React, animations, and lazy loading, improving initial page load speed by 30% and enhancing user engagement"
+            "Built customer voucher management UI and integrated backend APIs for real-time voucher redemption",
+            "Contributed to debugging and reviewing PRs during critical product development cycles",
+            "Integrated Arcjet for live email validation, improving voucher transaction security by 50%"
           ]
         },
         {
-          title: "Nexzap Wallet Security",
-          desc: "Enhanced security and user experience in the Nexzap Wallet application.",
+          title: "Nexzap Website Enhancements",
+          desc: "Optimized and extended the company website for better UX and performance.",
           points: [
-            "Developed customer voucher management UI and led backend integration",
-            "Actively participated in code reviews and collaborative debugging sessions during critical development sprints",
-            "Integrated Arcjet security protocols into Nexzap Wallet for live email validation, increasing transactional security by 50%"
+            "Added lazy loading and code-splitting to boost initial load speed and SEO",
+            "Developed responsive layouts and animation effects using React and Tailwind CSS"
           ]
         }
       ],
       skills: [
         "React",
-        "Performance Optimization",
         "UI Development",
+        "Voucher Systems",
         "Arcjet Security",
-        "Code Review",
-        "Debugging"
+        "Performance Optimization",
+        "Backend Integration",
+        "Code Review"
+      ]
+    },
+    {
+      id: 2,
+      img: logo,
+      role: "Software Consultant",
+      company: "Nexzap",
+      date: "Apr 2024 - Nov 2024",
+      desc: "Contributed to Nexzap's early-stage startup setup—laying foundational development systems and kickstarting product development.",
+      projects: [
+        {
+          title: "Initial Platform & Environment Setup",
+          desc: "Helped establish the development pipeline and contributed to foundational codebase decisions.",
+          points: [
+            "Set up Git version control, environment configurations, and CI/CD pipeline to enable smooth dev-to-prod workflows",
+            "Collaborated with the founding team to decide on core tech stack, coding standards, and API-first architecture",
+            "Bootstrapped reusable React components and backend folders to ensure scalability from the start"
+          ]
+        },
+        {
+          title: "Nexzap Company Website",
+          desc: "Built the MVP website for brand presence and investor/demo pitches.",
+          points: [
+            "Implemented a modern, mobile-responsive React website with animations and performance enhancements",
+            "Reduced load time by 30% via lazy loading and code-splitting techniques"
+          ]
+        }
+      ],
+      skills: [
+        "Startup Engineering",
+        "React",
+        "Project Bootstrapping",
+        "Version Control",
+        "Environment Configuration",
+        "Team Collaboration"
       ]
     }
-  ];  
+  ];
+  
+  
+
+
+
   export const education = [
     {
       id: 1,
       img: "https://images.shiksha.com/mediadata/images/1595846059phpNWbCy3.jpeg",
       school: "BV Raju Institute of Technology, Narsapur, Medak",
       date: "Oct 2020 - Jun 2024",
-      grade: "8.96 CGPA",
+      grade: "8.93 CGPA",
       desc: "I earned my Bachelor's degree in Information Technology from B V Raju Institute of Technology with a commendable CGPA of 8.96. My coursework includes key subjects such as Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others.",
       degree: "Bachelor of Technology - BTech, Information Technology and Engineering",
     },
@@ -283,7 +341,6 @@ export const Bio = {
   ];
   
   export const projects = [
-
 
     {
       id: 1,
