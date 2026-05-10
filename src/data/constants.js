@@ -3,61 +3,103 @@ import Todos from '../images/Todos.png';
 import Weather from '../images/Weather.png';
 import quiz from '../images/Quizapp.png';
 import logo from '../images/nexlogo.png'
-export const Bio = {
-    name: "VIGNESH THIPPARTHI",
-    roles: [
-      "Software Engineer",
-      "Full Stack Developer",
-      "ML Enthusiast",
-      "Cyber Security Fan",
+import visaLogo from '../images/visalogo.png';
 
-    ],
-    description:
-      "I am a Results-driven and adaptable professional with a commitment to excellence and a proven ability to deliver impactful outcomes. Proactive and innovative, I thrive in dynamic environments, consistently exceeding expectations and contributing to organizational success.",
-    github: "https://github.com/VIGNESH-THIPPARTHI",
-    resume:
-      "https://drive.google.com/file/d/1V68t0qyxQLv7Ck5VFMZILwmQCsFV2jnT/view?usp=drivesdk",
-    linkedin: " https://www.linkedin.com/in/vignesh-thipparthi/",
-    Leetcode: "https://leetcode.com/VIGNESH_12B2/",
-    insta: "https://www.instagram.com/t.vignesh_3004?igsh=MXd3OHkyczV5N25kdQ==",
-  };
-  
-  export const skills = [
+export const Bio = {
+  name: "VIGNESH THIPPARTHI",
+  shortName: "Vignesh Thipparthi",
+  initials: "VT",
+  /** One calm line under your name — who you are */
+  tagline: "Software engineer · payments scale · ships with taste",
+  roles: [
+    "backend & platform APIs",
+    "secure, observable delivery",
+    "developer tooling · CI/CD",
+  ],
+  headline:
+    "I’m an engineer who cares how software feels—not only that it runs. I’ve gone from owning features at an early‑stage startup to building at global payments scale.",
+  description:
+    "My path has been steady growth—Java and Spring ecosystems, React when the UI needs it, auth, telemetry, and CI/CD hygiene. Learning when to optimise and when to ship is a muscle I exercise every sprint.",
+  currentTitle: "Software Engineer",
+  currentCompany: "Visa",
+  story:
+    "I like problems that sit between people and systems—dashboards admins live in, APIs teams trust, flows that quietly work. Nexzap is where I learned end‑to‑end ownership; Visa is where I’m learning durability and discipline at planetary scale.",
+  engineeringEthos:
+    "Clarity beats cleverness—typed contracts, observable services, UX that earns trust.",
+  beyondWork:
+    "Beyond the sprint I stay interested in secure systems, API craftsmanship, and product UX that holds up in production—not demos.",
+  collaborationLine:
+    "Open to the right collaborations on serious software products—platform work, tooling, or features where craftsmanship matters.",
+  github: "https://github.com/VIGNESH-THIPPARTHI",
+  resume:
+    "https://drive.google.com/file/d/1V68t0qyxQLv7Ck5VFMZILwmQCsFV2jnT/view?usp=drivesdk",
+  linkedin: " https://www.linkedin.com/in/vignesh-thipparthi/",
+  Leetcode: "https://leetcode.com/VIGNESH_12B2/",
+  insta: "https://www.instagram.com/t.vignesh_3004?igsh=MXd3OHkyczV5N25kdQ==",
+  email: "thipparthivignesh3004@gmail.com",
+};
+
+/** Quick facts — about you, not sales */
+export const heroStats = [
+  { label: "Now", value: "Visa" },
+  { label: "Title", value: "Software Engineer" },
+  { label: "Earlier", value: "Nexzap · full‑stack" },
+];
+
+/** Infinite marquee — edit order anytime */
+export const marqueeTech = [
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Node.js",
+  "PostgreSQL",
+  "MongoDB",
+  "REST & OpenAPI",
+  "Docker",
+  "Telemetry",
+  "Tailwind",
+  "Framer Motion",
+  "Spring Boot",
+  "Java",
+  "Python",
+];
+
+/** Stable skill icons via jsDelivr — pinned devicon release v2.17.0 (avoid expired hotlinks) */
+const SKILL_ICON =
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons";
+
+export const skills = [
     {
       title: "Frontend Development",
       skills: [
         {
           name: "HTML",
-          image: "https://www.w3.org/html/logo/badge/html5-badge-h-solo.png",
+          image: `${SKILL_ICON}/html5/html5-original.svg`,
         },
         {
           name: "CSS",
-          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
+          image: `${SKILL_ICON}/css3/css3-original.svg`,
         },
         {
           name: "Bootstrap",
-          image: "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
+          image: `${SKILL_ICON}/bootstrap/bootstrap-original.svg`,
         },
         {
           name: "Tailwind",
-          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNhoXisDruJMDAq3Ltd-wuaMW2lGxck9wAKw&s",
+          image: `${SKILL_ICON}/tailwindcss/tailwindcss-original.svg`,
         },
         {
           name: "JavaScript",
-          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
+          image: `${SKILL_ICON}/javascript/javascript-original.svg`,
         },
         {
           name: "React.Js",
-          image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
+          image: `${SKILL_ICON}/react/react-original.svg`,
         },
         {
           name: "Next.Js",
-          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyya9RHo3mreo1_8Ha8ccZtAUUpaCQrN4WxA&s",
-        },
-        // {
-        //   name: "Flutter",
-        //   image: "https://cdn.prod.website-files.com/6047a9e35e5dc54ac86ddd90/63018720eab248248ff88ee3_1bd86e15.png",
-        // }
+          image: `${SKILL_ICON}/nextjs/nextjs-original.svg`,
+        }
       ]
     },
     {
@@ -65,29 +107,28 @@ export const Bio = {
       skills: [
         {
           name: "Node.js",
-          image: "https://nodejs.org/static/images/logo.svg",
+          image: `${SKILL_ICON}/nodejs/nodejs-original.svg`,
+        },
+        {
+          name: "Spring Boot",
+          image: `${SKILL_ICON}/spring/spring-original.svg`,
         },
         {
           name: "Express.js",
-          image: "https://img.icons8.com/?size=128&id=2ZOaTclOqD4q&format=png",
+          image: `${SKILL_ICON}/express/express-original.svg`,
         },
         {
           name: "MongoDB",
-          image: "https://img.icons8.com/?size=96&id=74402&format=png",
+          image: `${SKILL_ICON}/mongodb/mongodb-original.svg`,
         },
         {
           name: "PostgreSQL",
-          image: "https://www.postgresql.org/media/img/about/press/elephant.png",
+          image: `${SKILL_ICON}/postgresql/postgresql-original.svg`,
         },
         {
           name: "MySQL",
-          image:
-            "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
+          image: `${SKILL_ICON}/mysql/mysql-original-wordmark.svg`,
         },
-        // {
-        //   name: "Firebase",
-        //   image: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
-        // }
       ]
     },
     {
@@ -95,23 +136,23 @@ export const Bio = {
       skills: [
         {
           name: "Python",
-          image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+          image: `${SKILL_ICON}/python/python-original.svg`,
         },
         {
           name: "Java",
-          image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
+          image: `${SKILL_ICON}/java/java-original.svg`,
         },
         {
           name: "Kotlin",
-          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXk1KazwxBr0WhH8JrlzaSOnmuGkX0wRdrTA&s",
+          image: `${SKILL_ICON}/kotlin/kotlin-original.svg`,
         },
         {
           name: "SQL",
-          image: "https://w7.pngwing.com/pngs/525/959/png-transparent-microsoft-azure-sql-database-microsoft-sql-server-cloud-computing-text-trademark-logo-thumbnail.png",
+          image: `${SKILL_ICON}/mysql/mysql-original.svg`,
         },
         {
           name: "JavaScript",
-          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
+          image: `${SKILL_ICON}/javascript/javascript-original.svg`,
         }
       ]
     },
@@ -120,15 +161,15 @@ export const Bio = {
       skills: [
         {
           name: "Git",
-          image: "https://e7.pngegg.com/pngimages/713/558/png-clipart-computer-icons-pro-git-github-logo-text-logo-thumbnail.png",
+          image: `${SKILL_ICON}/git/git-original.svg`,
         },
         {
           name: "GitHub",
-          image: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+          image: `${SKILL_ICON}/github/github-original.svg`,
         },
         {
           name: "Docker",
-          image: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png",
+          image: `${SKILL_ICON}/docker/docker-original.svg`,
         },
         {
           name: "New Relic",
@@ -136,7 +177,7 @@ export const Bio = {
         },
         {
           name: "Postman",
-          image: "https://www.cdnlogo.com/logos/p/20/postman.svg",
+          image: "https://voyager.postman.com/logo/postman-logo-icon-orange.svg",
         },
         {
           name: "Arcjet",
@@ -144,11 +185,11 @@ export const Bio = {
         },
         {
           name: "VS Code",
-          image: "https://img.icons8.com/?size=96&id=9OGIyU8hrxW5&format=png",
+          image: `${SKILL_ICON}/vscode/vscode-original.svg`,
         },
         {
           name: "Android Studio",
-          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Android_Studio_icon_%282023%29.svg/640px-Android_Studio_icon_%282023%29.svg.png",
+          image: `${SKILL_ICON}/androidstudio/androidstudio-original.svg`,
         },
         {
           name: "Vercel",
@@ -160,24 +201,24 @@ export const Bio = {
       title: "Additional Skills",
       skills: [
         {
-          name: "Jupyter",
-          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1767px-Jupyter_logo.svg.png",
+          name: "CSS",
+          image: `${SKILL_ICON}/css3/css3-original.svg`,
         },
         {
-          name: "Google Colab",
-          image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.laYIzRY2A-jpnBA2rO2jSQHaEj%26pid%3DApi&f=1&ipt=a91db9d15134be512d993ddb890716d355294fb5b46f6525e623f9980525298f&ipo=images",
+          name: "JavaScript",
+          image: `${SKILL_ICON}/javascript/javascript-original.svg`,
         },
         {
-          name: "Object-Oriented Programming",
-          image:"https://res.cloudinary.com/practicaldev/image/fetch/s--ymOHw4aF--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/rewxsx85fqmolo6r49p9.jpg",
+          name: "Spring Boot",
+          image: `${SKILL_ICON}/spring/spring-original.svg`,
+        },
+        {
+          name: "Android Studio",
+          image: `${SKILL_ICON}/androidstudio/androidstudio-original.svg`,
         },
         {
           name: "Linux",
-          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRdKovOa8lVKIjdmfwrvfp_VEnlCZu41jaDd6uvg00mw&s",
-        },
-        {
-          name: "Debugging",
-          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_SLaPRiMQ7wD4zp3qPLtySyPNjhKpdpDkoA&s",
+          image: `${SKILL_ICON}/linux/linux-original.svg`,
         },
       ]
     },
@@ -186,11 +227,59 @@ export const Bio = {
 
   export const experiences = [
     {
+      id: "visa",
+      img: visaLogo,
+      role: "Software Engineer",
+      company: "Visa",
+      date: "2026 - Present",
+      desc:
+        "Building enterprise-grade backend services and AI-assisted developer tooling for fraud prevention and intelligent risk—production APIs, hardened pipelines, and audit-ready systems at global payments scale.",
+      projects: [
+        {
+          title: "Dependency Guardian",
+          desc:
+            "AI-powered developer tool that scans project dependencies, detects vulnerabilities, proposes intelligent fixes, applies them safely, and opens pull requests in one seamless workflow—cutting friction between security hygiene and everyday shipping.",
+          points: [
+            "Scans dependencies end-to-end; surfaces risk, suggests fixes, applies changes, and raises PRs so teams stay secure without losing velocity",
+            "Targets a seamless loop from detection to merge-ready updates for real engineering workflows",
+          ],
+        },
+        {
+          title: "Rule Optimization API · Integrated Risk Platform (IRP)",
+          desc:
+            "Designed and built a Rule Optimization REST API so fraud-detection rules can be tuned using ML-driven recommendations—covering analytics, optimization suggestions, action management, and deep rule investigations with full audit trails for compliance.",
+          points: [
+            "Architected Spring Boot 4.0.3 on Java 21 with optimization flows for cleanup, threshold tuning, consolidation, and new-rule suggestions",
+            "Shipped four core API areas: rule analytics, optimization proposals, actionable controls, and detailed investigations",
+            "Implemented action management and comprehensive audit histories aligned with regulatory and operational scrutiny",
+            "Owned Jenkins CI/CD: automated testing, SonarQube analysis, Checkmarx security scanning, Docker images, multi-stage pipelines, and deployment via AWS ECR",
+            "Drove quality to 95%+ code coverage (JaCoCo) alongside PostgreSQL + JPA/Hibernate for optimization metadata and audit persistence",
+            "Delivered OpenAPI 3 specification and Swagger UI so teams integrate and evolve the surface area with confidence",
+          ],
+        },
+      ],
+      skills: [
+        "Java 21",
+        "Spring Boot",
+        "REST & OpenAPI 3",
+        "PostgreSQL",
+        "JPA / Hibernate",
+        "Jenkins",
+        "Docker",
+        "AWS ECR",
+        "SonarQube",
+        "Checkmarx",
+        "JaCoCo",
+        "Fraud / risk domains",
+        "AI-assisted tooling",
+      ],
+    },
+    {
       id: 0,
       img: logo,
       role: "Software Engineer",
       company: "Nexzap",
-      date: "Feb 2025 - Present",
+      date: "Feb 2025 - early 2026",
       desc: "Spearheading development of Tagflo’s full-stack Admin Panel and driving scalable API infrastructure with a focus on observability, security, and performance.",
       projects: [
         {

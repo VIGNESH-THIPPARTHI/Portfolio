@@ -11,68 +11,84 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Education from "./components/Education";
 import ProjectDetails from "./components/ProjectDetails";
+import Spotlight from "./components/Spotlight";
+import ScrollProgress from "./components/ScrollProgress";
 import styled from "styled-components";
 import { useState, useEffect } from "react";
 const Body = styled.div`
+  position: relative;
+  z-index: 1;
   background-color: ${({ theme }) => theme.bg};
   width: 100%;
   overflow-x: hidden;
+  min-height: 100vh;
 `
 
 const Wrapper = styled.div`
-  background: linear-gradient(38.73deg, rgba(204, 0, 187, 0.15) 0%, rgba(201, 32, 184, 0) 50%), linear-gradient(141.27deg, rgba(0, 70, 209, 0) 50%, rgba(0, 70, 209, 0.15) 100%);
+  position: relative;
   width: 100%;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 72% 45% at 50% -15%, rgba(167, 139, 250, 0.08), transparent),
+      radial-gradient(ellipse 55% 35% at 100% 5%, rgba(94, 234, 212, 0.04), transparent),
+      radial-gradient(ellipse 45% 28% at 0% 45%, rgba(251, 113, 133, 0.04), transparent);
+  }
 `
 
 const ScrollToTop = styled.div`
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 24px;
+  right: 24px;
   background: linear-gradient(
-    225deg, 
-    ${({ theme }) => theme.primary} 0%, 
-    ${({ theme }) => theme.primary + "dd"} 100%
+    135deg,
+    ${({ theme }) => theme.primary} 0%,
+    ${({ theme }) => theme.secondary} 100%
   );
   padding: 12px;
   border-radius: 50%;
-  color: white;
+  color: ${({ theme }) => theme.text_black};
   cursor: pointer;
   font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   opacity: ${({ visible }) => visible ? '1' : '0'};
-  transform: translateY(${({ visible }) => visible ? '0' : '20px'});
-  transition: all 0.3s ease-in-out;
-  z-index: 1000;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transform: translateY(${({ visible }) => visible ? '0' : '24px'});
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 10002;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 0 0 1px rgba(168, 85, 247, 0.2),
+    0 12px 40px rgba(0, 0, 0, 0.45);
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px ${({ theme }) => theme.primary + '90'};
-    background: linear-gradient(
-      225deg,
-      ${({ theme }) => theme.primary + "ff"} 0%,
-      ${({ theme }) => theme.primary} 100%
-    );
+    transform: translateY(-4px) scale(1.05);
+    box-shadow:
+      0 0 30px rgba(34, 211, 238, 0.35),
+      0 16px 48px rgba(0, 0, 0, 0.5);
   }
 
   &:active {
-    transform: scale(0.95);
+    transform: scale(0.96);
   }
 
   &::before {
     content: '↑';
+    font-family: var(--font-display, system-ui);
     font-size: 20px;
-    font-weight: bold;
-    animation: bounce 1s infinite;
+    font-weight: 800;
+    animation: bounce 1.2s ease-in-out infinite;
   }
 
   @keyframes bounce {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-3px); }
+    50% { transform: translateY(-4px); }
   }
 `;
 
@@ -99,7 +115,10 @@ function App() {
 
   return (
     <ThemeProvider theme={darkTheme}>
+      <Spotlight />
+      <ScrollProgress />
       <Router >
+        <div className="grain" aria-hidden="true" />
         <Navbar />
         <Body>
           <HeroSection />

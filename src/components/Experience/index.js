@@ -10,18 +10,23 @@ import { experiences } from '../../data/constants';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const Container = styled.div`
+const Container = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
     z-index: 1;
     align-items: center;
-    padding: 50px 0px 80px 0px;
-    background: ${({ theme }) => theme.card + '15'};
-    clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
+    padding: 64px 20px 96px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.02) 0%,
+      transparent 40%,
+      rgba(167, 139, 250, 0.03) 100%
+    );
+    clip-path: polygon(0 0, 100% 2%, 100% 98%, 0 100%);
     @media (max-width: 960px) {
-        padding: 40px 0px 60px 0px;
+        padding: 48px 16px 72px;
     }
 `;
 
@@ -40,18 +45,23 @@ const Wrapper = styled.div`
     }
 `;
 
-const Title = styled(motion.div)`
-    font-size: 42px;
+const Title = styled(motion.h2)`
+    font-family: var(--font-display, system-ui);
+    font-size: clamp(2rem, 4vw, 2.75rem);
     text-align: center;
-    font-weight: 600;
-    margin-top: 20px;
-    background: linear-gradient(45deg, ${({ theme }) => theme.primary}, ${({ theme }) => theme.secondary});
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    @media (max-width: 768px) {
-        margin-top: 12px;
-        font-size: 32px;
-    }
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-top: 12px;
+    color: ${({ theme }) => theme.text_primary};
+`;
+
+const Subtitle = styled(motion.p)`
+    text-align: center;
+    max-width: 560px;
+    margin: 12px auto 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: ${({ theme }) => theme.text_secondary};
 `;
 
 const TimelineSection = styled.div`
@@ -168,12 +178,19 @@ const Experience = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    Professional Journey
+                    Experience
                 </Title>
+                <Subtitle
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.15 }}
+                >
+                    From high-growth startup builds to global-scale engineering—one through-line: ship with clarity and care.
+                </Subtitle>
                 <TimelineSection ref={ref}>
                     <Timeline>
                         {experiences.map((experience, index) => (
-                            <StyledTimelineItem key={index}>
+                            <StyledTimelineItem key={experience.id ?? index}>
                                 <TimelineSeparator>
                                     <StyledTimelineDot variant="outlined" />
                                     {index !== experiences.length - 1 && <StyledTimelineConnector />}

@@ -1,229 +1,274 @@
-import React from 'react'
-import styled from 'styled-components'
-import { skills } from '../../data/constants'
+import React from "react";
+import styled, { keyframes } from "styled-components";
+import { motion } from "framer-motion";
+import { skills, marqueeTech } from "../../data/constants";
 
-const Container = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-position: relative;
-z-index: 1;
-align-items: center;
-padding-bottom:20px;
-`
+const marqueeScroll = keyframes`
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+`;
 
-const Wrapper = styled.div`
-position: relative;
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-direction: column;
-width: 100%;
-max-width: 1100px;
-gap: 12px;
-@media (max-width: 960px) {
-    flex-direction: column;
-}
-`
+const MarqueeOuter = styled.div`
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 40px;
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 10%,
+    #000 90%,
+    transparent
+  );
+`;
 
-export const Title = styled.div`
-font-size: 42px;
-text-align: center;
-font-weight: 600;
-margin-top: 20px;
-  color: ${({ theme }) => theme.text_primary};
-  @media (max-width: 768px) {
-margin-top: 12px;
-      font-size: 32px;
+const MarqueeTrack = styled.div`
+  display: flex;
+  width: max-content;
+  gap: 3.5rem;
+  animation: ${marqueeScroll} 42s linear infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+
+  &:hover {
+    animation-play-state: paused;
   }
 `;
 
-export const Desc = styled.div`
-    font-size: 18px;
-    text-align: center;
-    max-width: 600px;
-    color: ${({ theme }) => theme.text_secondary};
-    @media (max-width: 768px) {
-        font-size: 16px;
-    }
+const MarqueeItem = styled.span`
+  font-family: var(--font-display, system-ui);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: ${({ theme }) => theme.text_tertiary};
+  white-space: nowrap;
+  flex-shrink: 0;
+
+  &::after {
+    content: "·";
+    margin-left: 3.5rem;
+    color: ${({ theme }) => theme.primary};
+    opacity: 0.45;
+  }
+`;
+
+const Container = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  align-items: center;
+  padding: 72px 20px 88px;
+`;
+
+const Wrapper = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1100px;
+  gap: 16px;
+`;
+
+export const Title = styled.h2`
+  font-family: var(--font-display, system-ui);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-top: 8px;
+  color: ${({ theme }) => theme.text_primary};
+`;
+
+export const Desc = styled.p`
+  font-size: 1.05rem;
+  text-align: center;
+  max-width: 560px;
+  line-height: 1.65;
+  color: ${({ theme }) => theme.text_secondary};
 `;
 
 const SkillsContainer = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 30px;
-  gap: 30px;
+  margin-top: 40px;
+  gap: 28px;
   justify-content: center;
-  transition: all 0.5s ease-in-out;
-  
-`
+`;
 
-const Skill = styled.div`
+const Skill = styled(motion.div)`
   width: 100%;
   max-width: 500px;
   background: ${({ theme }) => theme.card};
-  border: 0.1px solid ${({ theme }) => theme.primary + '50'};
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
-  border-radius: 16px;
-  padding: 18px 36px;
+  border: 1px solid ${({ theme }) => theme.cardBorder};
+  border-radius: 20px;
+  padding: 28px 32px;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.35);
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
     background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.05),
-      transparent
+      135deg,
+      rgba(168, 85, 247, 0.35),
+      transparent 40%,
+      rgba(34, 211, 238, 0.2)
     );
-    transition: 0.5s;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0.7;
   }
 
-  &:hover {
-    transform: translateY(-5px);
-    border-color: ${({ theme }) => theme.primary};
-    box-shadow: 0 0 20px ${({ theme }) => theme.primary + '50'};
-    
-    &::before {
-      left: 100%;
-    }
-  }
-
-  @media (max-width: 768px) {
-    max-width: 400px;
-    padding: 10px 36px;
-  }
-  @media (max-width: 500px) {
-    max-width: 330px;
-    padding: 10px 36px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -30%;
+    width: 60%;
+    height: 100%;
+    background: radial-gradient(
+      circle,
+      rgba(168, 85, 247, 0.12),
+      transparent 70%
+    );
+    pointer-events: none;
   }
 `;
 
-const SkillTitle = styled.h2`
-  font-size: 28px;
-  font-weight: 600;
-  color: ${({ theme }) => theme.text_secondary};
-  margin-bottom: 20px;
+const SkillTitle = styled.h3`
+  font-family: var(--font-display, system-ui);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: ${({ theme }) => theme.text_primary};
+  margin-bottom: 22px;
   text-align: center;
-`
+  position: relative;
+  z-index: 1;
+`;
 
 const SkillList = styled.div`
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 14px;
-  margin-bottom: 20px;
-`
+  gap: 12px;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
+`;
 
 const SkillImage = styled.img`
-  width: 24px;
-  height: 24px;
-  transition: all 0.8s ease-in-out;
-`
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+`;
 
 const SkillItem = styled.div`
-  font-size: 16px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.text_primary + 80};
-  border: 1px solid ${({ theme }) => theme.text_primary + 80};
+  font-size: 14px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text_primary};
+  border: 1px solid ${({ theme }) => theme.cardBorder};
   border-radius: 12px;
-  padding: 12px 16px;
+  padding: 11px 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom:5px;
   gap: 8px;
-  transition: all 0.3s ease-in-out;
-
-  &:hover {
-    box-shadow: 0 0 10px ${({ theme }) => theme.primary + '50'};
-    transform: translateY(-3px);
-    border-color: ${({ theme }) => theme.primary};
-    background: linear-gradient(
-      225deg,
-      ${({ theme }) => theme.primary + '20'} 0%,
-      transparent 100%
-    );
-  }
-
-  @media (max-width: 768px) {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-  @media (max-width: 500px) {
-    font-size: 14px;
-    padding: 6px 12px;
-  }
-  transition: all 0.5s ease-in-out;
+  transition: transform 0.25s ease, border-color 0.25s ease,
+    box-shadow 0.25s ease;
+  background: ${({ theme }) => theme.bgElevated};
   position: relative;
   overflow: hidden;
-  background: ${({ theme }) => theme.card};
-  
-  &:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.1),
-      transparent
-    );
-    transform: translateX(-100%);
-    transition: 0.5s;
-  }
-
-  &:hover:before {
-    transform: translateX(100%);
-  }
 
   &:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transform: translateY(-4px) scale(1.02);
+    border-color: ${({ theme }) => theme.primary + "55"};
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35),
+      0 0 24px rgba(168, 85, 247, 0.12);
   }
 
   &:hover ${SkillImage} {
-    transform: rotate(360deg) scale(1.1);
+    transform: rotate(12deg) scale(1.08);
   }
-}
-  
-`
+
+  @media (max-width: 768px) {
+    font-size: 13px;
+    padding: 9px 12px;
+  }
+`;
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.06 },
+  },
+};
+
+const card = {
+  hidden: { opacity: 0, y: 28 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+  },
+};
 
 const Skills = () => {
+  const loop = [...marqueeTech, ...marqueeTech];
+
   return (
     <Container id="skills">
       <Wrapper>
-        <Title>Skills</Title>
-        <Desc>Over the past two years, I have been actively developing and refining the following skills.
+        <MarqueeOuter aria-hidden>
+          <MarqueeTrack>
+            {loop.map((tech, i) => (
+              <MarqueeItem key={`${tech}-${i}`}>{tech}</MarqueeItem>
+            ))}
+          </MarqueeTrack>
+        </MarqueeOuter>
+        <Title>Skills & tooling</Title>
+        <Desc>
+          From pixel-level UI to production APIs and telemetry—the toolbox I use
+          to ship at startup speed and enterprise bar.
         </Desc>
-        <SkillsContainer>
+        <SkillsContainer
+          as={motion.div}
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-80px" }}
+        >
           {skills.map((skill) => (
-            <Skill>
+            <Skill key={skill.title} variants={card}>
               <SkillTitle>{skill.title}</SkillTitle>
               <SkillList>
                 {skill.skills.map((item) => (
-                  <SkillItem>
-                    <SkillImage src={item.image}/>
+                  <SkillItem key={`${skill.title}-${item.name}`}>
+                    <SkillImage src={item.image} alt="" />
                     {item.name}
                   </SkillItem>
                 ))}
               </SkillList>
             </Skill>
           ))}
-
         </SkillsContainer>
       </Wrapper>
     </Container>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;

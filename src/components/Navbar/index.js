@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, MobileIcon, MobileMenu, MobileLink } from './NavbarStyledComponent'
-import { DiCssdeck } from 'react-icons/di';
+import { Nav, NavLink, NavbarContainer, LogoMark, LogoText, NavLogo, NavItems, MobileIcon, MobileMenu, MobileLink } from './NavbarStyledComponent'
 import { FaBars } from 'react-icons/fa';
 import { Bio } from '../../data/constants';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -9,13 +8,19 @@ import LeetCodeIcon from '../Icons/LeetCodeIcon';
   
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   // Handle window resize and close mobile menu if screen becomes larger than mobile breakpoint
   useEffect(() => {
     const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-      if (window.innerWidth > 768) { // 768px is typically mobile breakpoint
+      if (window.innerWidth > 768) {
         setIsOpen(false);
       }
     };
@@ -29,22 +34,25 @@ const Navbar = () => {
   };
 
   return (
-    <Nav>
+    <Nav $scrolled={scrolled}>
       <NavbarContainer>
         <NavLogo to='/'>
-          <button 
-            style={{ 
-              display: "flex", 
-              alignItems: "center", 
-              color: "white", 
-              marginBottom: '20;', 
-              cursor: 'pointer', 
-              background: 'none', 
-              border: 'none' 
-            }} 
-            onClick={() => window.location.href = '/'}
+          <button
+            type="button"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              cursor: "pointer",
+              background: "none",
+              border: "none",
+              padding: 0,
+            }}
+            onClick={() => {
+              window.location.href = "/";
+            }}
           >
-            <DiCssdeck size="3rem" /> <Span>Portfolio</Span>
+            <LogoMark>{Bio.initials}</LogoMark>
+            <LogoText>{Bio.shortName.split(" ")[0]}</LogoText>
           </button>
         </NavLogo>
         <MobileIcon>

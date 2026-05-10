@@ -1,58 +1,83 @@
-import React from 'react'
-import { useState } from 'react'
-import { Container, Wrapper, Title, Desc, CardContainer, ToggleButtonGroup, ToggleButton, Divider } from './ProjectsStyle'
-import ProjectCard from '../Cards/ProjectCards'
-import { projects } from '../../data/constants'
+import React, { useState } from "react";
+import {
+  Container,
+  Wrapper,
+  Title,
+  Desc,
+  CardContainer,
+  ToggleButtonGroup,
+  ToggleButton,
+  Divider,
+} from "./ProjectsStyle";
+import ProjectCard from "../Cards/ProjectCards";
+import { projects } from "../../data/constants";
 
+const Projects = ({ openModal, setOpenModal }) => {
+  const [toggle, setToggle] = useState("all");
 
-const Projects = ({openModal,setOpenModal}) => {
-  const [toggle, setToggle] = useState('all');
+  const filtered =
+    toggle === "all"
+      ? projects
+      : projects.filter((item) => item.category === toggle);
+
   return (
     <Container id="projects">
       <Wrapper>
-        <Title>Projects</Title>
+        <Title>Things I&apos;ve built</Title>
         <Desc>
-          I have successfully contributed to a diverse portfolio of projects. Below are some highlights:
+          Shipping experiments, coursework, and production pieces—what I reach
+          for when learning and when it has to work.
         </Desc>
-        <ToggleButtonGroup >
-          {toggle === 'all' ?
-            <ToggleButton active value="all" onClick={() => setToggle('all')}>All</ToggleButton>
-            :
-            <ToggleButton value="all" onClick={() => setToggle('all')}>All</ToggleButton>
-          }
+        <ToggleButtonGroup role="tablist" aria-label="Filter projects">
+          <ToggleButton
+            type="button"
+            $active={toggle === "all"}
+            onClick={() => setToggle("all")}
+            aria-selected={toggle === "all"}
+          >
+            All
+          </ToggleButton>
           <Divider />
-          {toggle === 'web app' ?
-            <ToggleButton active value="web app" onClick={() => setToggle('web app')}>WEB APP'S</ToggleButton>
-            :
-            <ToggleButton value="web app" onClick={() => setToggle('web app')}>WEB APP'S</ToggleButton>
-          }
+          <ToggleButton
+            type="button"
+            $active={toggle === "web app"}
+            onClick={() => setToggle("web app")}
+            aria-selected={toggle === "web app"}
+          >
+            Web
+          </ToggleButton>
           <Divider />
-          {toggle === 'machine learning' ?
-            <ToggleButton active value="machine learning" onClick={() => setToggle('machine learning')}>MACHINE LEARNING</ToggleButton>
-            :
-            <ToggleButton value="machine learning" onClick={() => setToggle('machine learning')}>MACHINE LEARNING</ToggleButton>
-          }
+          <ToggleButton
+            type="button"
+            $active={toggle === "machine learning"}
+            onClick={() => setToggle("machine learning")}
+            aria-selected={toggle === "machine learning"}
+          >
+            ML
+          </ToggleButton>
           <Divider />
-          {toggle === 'Iot' ?
-            <ToggleButton active value="Iot" onClick={() => setToggle('Iot')}>IOT</ToggleButton>
-            :
-            <ToggleButton value="Iot" onClick={() => setToggle('Iot')}>IOT</ToggleButton>
-          }
+          <ToggleButton
+            type="button"
+            $active={toggle === "Iot"}
+            onClick={() => setToggle("Iot")}
+            aria-selected={toggle === "Iot"}
+          >
+            IoT
+          </ToggleButton>
         </ToggleButtonGroup>
         <CardContainer>
-          {toggle === 'all' && projects
-            .map((project) => (
-              <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal}/>
-            ))}
-          {projects
-            .filter((item) => item.category === toggle)
-            .map((project) => (
-              <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal}/>
-            ))}
+          {filtered.map((project) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              openModal={openModal}
+              setOpenModal={setOpenModal}
+            />
+          ))}
         </CardContainer>
       </Wrapper>
     </Container>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

@@ -85,7 +85,9 @@ const Top = styled.div`
 `;
 
 const Image = styled.img`
+    width: 60px;
     height: 60px;
+    object-fit: contain;
     background-color: transparent;
     border-radius: 12px;
     margin-top: 4px;
@@ -96,6 +98,7 @@ const Image = styled.img`
     }
 
     @media (max-width: 768px){
+        width: 45px;
         height: 45px;
     }
 `;
